@@ -1,480 +1,745 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>
-      Tailwind Starter Template - Landing Page Template: Tailwind Toolbox
+        Tailwind Starter Template - Landing Page Template: Tailwind Toolbox
     </title>
-    <meta name="description" content="Simple landind page" />
-    <meta name="keywords" content="" />
-    <meta name="author" content="" />
+    <meta name="description" content="Simple landind page"/>
+    <meta name="keywords" content=""/>
+    <meta name="author" content=""/>
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
     <!--Replace with your tailwind.css once created-->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet"/>
     <!-- Define your gradient here - use online tools to find a gradient matching your branding-->
     <style>
-      .gradient {
-        background: linear-gradient(90deg, #2F84AF 0%, #C73504 100%);
-      }
+        .gradient {
+            background: linear-gradient(90deg, #2F84AF 0%, #C73504 100%);
+        }
     </style>
-  </head>
-  <body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
-    <!--Nav-->
-    <nav id="header" class="fixed w-full z-30 top-0 text-white">
-      <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+</head>
+<body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
+<!--Nav-->
+<nav id="header" class="fixed w-full z-30 top-0 text-white">
+    <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
         <div class="pl-4 flex items-center">
-          <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
-            <!--Icon from: http://www.potlabicons.com/ -->
-            <svg class="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.005 512.005">
-              <rect fill="#2a2a31" x="16.539" y="425.626" width="479.767" height="50.502" transform="matrix(1,0,0,1,0,0)" />
-              <path
-                class="plane-take-off"
-                d=" M 510.7 189.151 C 505.271 168.95 484.565 156.956 464.365 162.385 L 330.156 198.367 L 155.924 35.878 L 107.19 49.008 L 211.729 230.183 L 86.232 263.767 L 36.614 224.754 L 0 234.603 L 45.957 314.27 L 65.274 347.727 L 105.802 336.869 L 240.011 300.886 L 349.726 271.469 L 483.935 235.486 C 504.134 230.057 516.129 209.352 510.7 189.151 Z "
-              />
-            </svg>
-            BRAINSDUMP
-          </a>
+            <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+                <!--Icon from: http://www.potlabicons.com/ -->
+                <svg class="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.005 512.005">
+                    <rect fill="#2a2a31" x="16.539" y="425.626" width="479.767" height="50.502"
+                          transform="matrix(1,0,0,1,0,0)"/>
+                    <path
+                            class="plane-take-off"
+                            d=" M 510.7 189.151 C 505.271 168.95 484.565 156.956 464.365 162.385 L 330.156 198.367 L 155.924 35.878 L 107.19 49.008 L 211.729 230.183 L 86.232 263.767 L 36.614 224.754 L 0 234.603 L 45.957 314.27 L 65.274 347.727 L 105.802 336.869 L 240.011 300.886 L 349.726 271.469 L 483.935 235.486 C 504.134 230.057 516.129 209.352 510.7 189.151 Z "
+                    />
+                </svg>
+                BRAINSDUMP
+            </a>
         </div>
         <div class="block lg:hidden pr-4">
-          <button id="nav-toggle" class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-            <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <title>Menu</title>
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-            </svg>
-          </button>
+            <button id="nav-toggle"
+                    class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+                </svg>
+            </button>
         </div>
-        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
-          <ul class="list-reset lg:flex justify-end flex-1 items-center">
-            <li class="mr-3">
-              <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Home</a>
-            </li>
-            <li class="mr-3">
-              <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#about-section">About</a>
-            </li>
-            <li class="mr-3">
-              <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#features-section">Features</a>
-            </li>
-            <li class="mr-3">
-              <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#pricing-section">Pricing</a>
-            </li>
-          </ul>
-          <button
-            id="navAction"
-            class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-            onclick="window.location.href='#call-to-action-section'"
-          >
-            Get Started
-          </button>
+        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"
+             id="nav-content">
+            <ul class="list-reset lg:flex justify-end flex-1 items-center">
+                <li class="mr-3">
+                    <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Home</a>
+                </li>
+                <li class="mr-3">
+                    <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                       href="#about-section">About</a>
+                </li>
+                <li class="mr-3">
+                    <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                       href="#features-section">Features</a>
+                </li>
+                <li class="mr-3">
+                    <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                       href="#pricing-section">Pricing</a>
+                </li>
+            </ul>
+            <button
+                    id="navAction"
+                    class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+                    onclick="window.location.href='#call-to-action-section'"
+            >
+                Get Started
+            </button>
         </div>
-      </div>
-      <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
-    </nav>
-    <!--Hero-->
-    <div class="pt-24">
-      <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+    </div>
+    <hr class="border-b border-gray-100 opacity-25 my-0 py-0"/>
+</nav>
+<!-- The Modal -->
+<div id="emailModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center px-4 z-50 hidden">
+  <!-- Modal Content -->
+  <div class="bg-white rounded-lg shadow-lg max-w-lg mx-auto p-6">
+    <!-- Modal Header -->
+    <div class="flex justify-between items-center pb-3">
+      <h3 class="text-lg font-medium text-gray-900">Stay Updated!</h3>
+      <button class="text-gray-500 hover:text-gray-600 focus:outline-none">
+        <span class="text-2xl">&times;</span>
+      </button>
+    </div>
+    <!-- Modal Body -->
+    <p class="text-sm text-gray-500 mb-4">The product is in development and will be ready in the next few months. Subscribe to our mailing list for updates and be the first to know when we launch!</p>
+    <form id="signup-form" action="https://formspree.io/f/xwkdjlbb" method="POST" class="flex flex-col space-y-4">
+      <input type="email" name="email" id="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="you@example.com" required>
+      <button type="submit" class="flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2  text-base font-medium text-white gradient focus:outline-none sm:text-sm">
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
+
+
+<!--Hero-->
+<div class="pt-24">
+    <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
         <!--Left Col-->
         <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-          <h1 class="my-4 text-5xl font-bold leading-tight">
-            Revolutionize Your Note-Taking with Brainsdump – Where Thoughts Become Insights
-          </h1>
-          <p class="leading-normal text-2xl mb-8">
-            Effortlessly transform scattered notes into structured knowledge. Just dump your thoughts, we'll map your insights.
-          </p>
+            <h1 class="my-4 text-5xl font-bold leading-tight">
+                Revolutionize Your Note-Taking with Brainsdump – Where Thoughts Become Insights
+            </h1>
+            <p class="leading-normal text-2xl mb-8">
+                Effortlessly transform scattered notes into structured knowledge. Just dump your thoughts, we'll map
+                your insights.
+            </p>
         </div>
         <!--Right Col-->
         <div class="w-full md:w-3/5 py-6 text-center">
-          <img class="w-full md:w-4/5 z-50" src="brainsdump4.png" />
+            <img class="w-full md:w-4/5 z-50" src="brainsdump4.png"/>
         </div>
-      </div>
     </div>
-    <div class="relative -mt-12 lg:-mt-24">
-      <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+</div>
+<div class="relative -mt-12 lg:-mt-24">
+    <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink">
         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-          <g transform="translate(-2.000000, 44.000000)" fill="#FFFFFF" fill-rule="nonzero">
-            <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496" opacity="0.100000001"></path>
-            <path
-              d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
-              opacity="0.100000001"
-            ></path>
-            <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z" id="Path-4" opacity="0.200000003"></path>
-          </g>
-          <g transform="translate(-4.000000, 76.000000)" fill="#FFFFFF" fill-rule="nonzero">
-            <path
-              d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z"
-            ></path>
-          </g>
+            <g transform="translate(-2.000000, 44.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496"
+                      opacity="0.100000001"></path>
+                <path
+                        d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
+                        opacity="0.100000001"
+                ></path>
+                <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z"
+                      id="Path-4" opacity="0.200000003"></path>
+            </g>
+            <g transform="translate(-4.000000, 76.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                <path
+                        d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z"
+                ></path>
+            </g>
         </g>
-      </svg>
-    </div>
-    <section class="bg-white border-b py-8" id="about-section">
-      <div class="container max-w-5xl mx-auto m-8">
+    </svg>
+</div>
+<section class="bg-white border-b py-8" id="about-section">
+    <div class="container max-w-5xl mx-auto m-8">
         <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-          About
+            About
         </h2>
         <div class="w-full mb-4">
-          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+            <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
         <div class="flex flex-wrap">
-          <div class="w-5/6 sm:w-1/2 p-6">
-            <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
-              Simplify Your Thoughts
-            </h3>
-            <p class="text-gray-600 mb-8">
-              Brainsdump isn't just another note-taking app; it's your daily thought organizer. No formatting, no fuss – just jot down your ideas, and let our AI do the rest. Say goodbye to the clutter and hello to seamless, structured graphs of your thoughts, connected in a way that makes sense.
-              <br />
-              <br />
-            </p>
-          </div>
-          <div class="w-full sm:w-1/2 p-6">
-            <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1"  class="w-full sm:h-64 mx-auto" viewBox="0 0 1177 598.5" xmlns:xlink="http://www.w3.org/1999/xlink"><path id="e73ea6d0-018f-4f1a-b9fb-ec835afd7d29-319" data-name="Path 438" d="M958.436,653.57547a24.21462,24.21462,0,0,1-23.38268-4.11877c-8.18977-6.87442-10.758-18.196-12.84671-28.68191l-6.17973-31.01657,12.9377,8.90836c9.30465,6.40641,18.81827,13.01866,25.26011,22.29785s9.25223,21.94708,4.07792,31.988" transform="translate(-186.80906 -197.435)" fill="#e6e6e6"/><path id="adfa37d6-6055-4e93-a6c7-1993979ff9f6-320" data-name="Path 439" d="M956.43833,693.286c1.62839-11.86369,3.30382-23.88079,2.15884-35.87167-1.01466-10.64933-4.26373-21.04881-10.87831-29.57938a49.20592,49.20592,0,0,0-12.62466-11.44039c-1.26215-.79648-2.42409,1.20354-1.16733,1.997a46.7794,46.7794,0,0,1,18.50446,22.32562c4.02858,10.24607,4.67545,21.41582,3.98154,32.30029-.41944,6.58218-1.31074,13.12121-2.20588,19.65252a1.19816,1.19816,0,0,0,.808,1.4225,1.16347,1.16347,0,0,0,1.42253-.808Z" transform="translate(-186.80906 -197.435)" fill="#f2f2f2"/><path id="ab8f3b7e-46a3-4c45-91c1-6e6ed9e46d7b-321" data-name="Path 442" d="M944.7173,674.24958a17.82512,17.82512,0,0,1-15.53141,8.01861c-7.8644-.37318-14.41806-5.85972-20.31713-11.07026l-17.452-15.40881,11.54987-.5528c8.3062-.39784,16.82672-.771,24.73814,1.79338s15.20757,8.72639,16.654,16.9154" transform="translate(-186.80906 -197.435)" fill="#e6e6e6"/><path id="a06078c2-c2e6-4e9e-9e9d-932246ef76f7-322" data-name="Path 443" d="M961.04131,700.10571c-7.83972-13.87142-16.93234-29.28794-33.1808-34.21551a37.02581,37.02581,0,0,0-13.95544-1.44105c-1.4819.128-1.1118,2.41174.367,2.28454a34.39821,34.39821,0,0,1,22.27164,5.89215c6.27994,4.27453,11.16975,10.21755,15.30781,16.51907,2.53511,3.8605,4.80577,7.88445,7.07642,11.903C959.65349,702.33242,961.77532,701.40488,961.04131,700.10571Z" transform="translate(-186.80906 -197.435)" fill="#f2f2f2"/><polygon points="494.22 150.5 494.22 282.58 189.16 282.58 189.16 352.71 108.51 352.71 108.51 150.5 494.22 150.5" fill="#fff"/><path d="M291.80906,344.435v209.22h84.16015v-7.01H298.81906V351.445h378.71v128.57h7.01V344.435Z" transform="translate(-186.80906 -197.435)" fill="#e5e5e5"/><rect x="189.35419" y="225.34781" width="244.49561" height="8.63082" fill="#e5e5e5"/><rect x="189.35419" y="247.78794" width="244.49561" height="8.63082" fill="#e5e5e5"/><rect x="189.35419" y="270.22806" width="244.49561" height="8.63082" fill="#e5e5e5"/><circle cx="174.51342" cy="229.98892" r="5.63266" fill="#e5e5e5"/><polygon points="389.22 3.5 389.22 135.58 84.16 135.58 84.16 205.71 3.51 205.71 3.51 3.5 389.22 3.5" fill="#fff"/><path d="M186.80906,197.435v209.22h84.16015v-7.01H193.81906v-195.2h378.71v128.57h7.01V197.435Z" transform="translate(-186.80906 -197.435)" fill="#f1f1f1"/><rect x="84.35419" y="78.34781" width="244.49561" height="8.63082" fill="#f1f1f1"/><rect x="84.35419" y="100.78794" width="244.49561" height="8.63082" fill="#f1f1f1"/><rect x="84.35419" y="123.22806" width="244.49561" height="8.63082" fill="#f1f1f1"/><circle cx="69.51342" cy="82.98892" r="5.63266" fill="#f1f1f1"/><rect x="209.77619" y="299.41412" width="385.71729" height="202.20937" fill="#fff"/><path d="M785.80906,702.565H393.07873V493.3426H785.80906Zm-385.71729-7.013H778.796V500.35564H400.09177Z" transform="translate(-186.80906 -197.435)" fill="#cbcbcb"/><rect x="290.20038" y="374.57656" width="244.49561" height="8.63082" fill="#6c63ff"/><rect x="290.20038" y="397.01669" width="244.49561" height="8.63082" fill="#6c63ff"/><rect x="290.20038" y="419.45681" width="244.49561" height="8.63082" fill="#6c63ff"/><circle cx="275.35962" cy="379.21767" r="5.63266" fill="#6c63ff"/><path d="M725.44621,493.35007a10.06737,10.06737,0,0,1,3.92234-14.93042l27.89641-87.347,19.4284,10.09245-33.53042,82.68569a10.12188,10.12188,0,0,1-17.71673,9.49924Z" transform="translate(-186.80906 -197.435)" fill="#9f616a"/><path d="M748.2368,403.1514a4.50917,4.50917,0,0,1,.02119-3.75868l9.55481-20.54247a12.53637,12.53637,0,0,1,24.06046,7.05209l-3.1935,22.50386a4.51406,4.51406,0,0,1-5.7515,3.69356l-21.85912-6.47651A4.509,4.509,0,0,1,748.2368,403.1514Z" transform="translate(-186.80906 -197.435)" fill="#6c63ff"/><polygon points="642.019 209.183 640.461 231.001 587.475 249.702 586.696 228.663 642.019 209.183" fill="#9f616a"/><path d="M761.038,374.671l17.14237-12.46718,28.05117-7.792,23.376,4.67519,3.896,36.62235-4.67519,23.376-60.77752,14.02558-6.2336-10.90878s-14.02558-14.02558-3.11679-29.60956Z" transform="translate(-186.80906 -197.435)" fill="#6c63ff"/><path d="M754.80436,342.67164V322.20853a32.64353,32.64353,0,1,1,65.28706,0v20.46311a4.3899,4.3899,0,0,1-4.385,4.385H759.18932A4.38991,4.38991,0,0,1,754.80436,342.67164Z" transform="translate(-186.80906 -197.435)" fill="#2f2e41"/><circle cx="599.32681" cy="125.4871" r="23.93309" fill="#9f616a"/><path d="M761.54594,322.82992a2.43626,2.43626,0,0,1-.57024-1.9422l2.835-19.7418a2.43962,2.43962,0,0,1,1.37838-1.86989c14.47068-6.7725,29.145-6.78107,43.61567-.02569a2.4548,2.4548,0,0,1,1.39218,1.98408l1.89249,19.76749a2.43565,2.43565,0,0,1-2.42514,2.66827h-4.79961a2.44551,2.44551,0,0,1-2.20747-1.4055l-2.07138-4.43825a1.46155,1.46155,0,0,0-2.77486.43679l-.40918,3.27253a2.4396,2.4396,0,0,1-2.41729,2.13443H763.387A2.43621,2.43621,0,0,1,761.54594,322.82992Z" transform="translate(-186.80906 -197.435)" fill="#2f2e41"/><path d="M865.4392,483.15889a10.06731,10.06731,0,0,1-6.97655-13.77062L821.35,385.54107l21.23033-5.34724,29.80474,84.10047a10.12188,10.12188,0,0,1-6.94588,18.86459Z" transform="translate(-186.80906 -197.435)" fill="#9f616a"/><path d="M822.61484,400.56782a4.50922,4.50922,0,0,1-2.479-2.82535L813.647,376.03573a12.53637,12.53637,0,0,1,22.67679-10.69584l12.54864,18.95135a4.514,4.514,0,0,1-1.85016,6.5802L826.374,400.53662A4.509,4.509,0,0,1,822.61484,400.56782Z" transform="translate(-186.80906 -197.435)" fill="#6c63ff"/><polygon points="639.353 490.356 625.845 490.355 619.419 438.253 639.355 438.254 639.353 490.356" fill="#9f616a"/><path d="M829.60666,700.88487l-43.55544-.00162v-.5509a16.95391,16.95391,0,0,1,16.953-16.95273h.00107l26.60219.00108Z" transform="translate(-186.80906 -197.435)" fill="#2f2e41"/><polygon points="629.087 380.349 619.878 390.231 577.378 359.413 590.97 344.828 629.087 380.349" fill="#9f616a"/><path d="M827.8241,584.18961l-29.69366,31.86476-.40305-.37556a16.95391,16.95391,0,0,1-.84575-23.96l.00074-.00079,18.13594-19.46185Z" transform="translate(-186.80906 -197.435)" fill="#2f2e41"/><path d="M830.38667,428.43574l4.32015,4.32016c21.60958,21.60958,26.92973,51.573,24.33455,82.02316a85.20579,85.20579,0,0,1-2.16194,13.39415c-7.792,31.168-3.1168,130.90543-18.70078,137.139L835.06186,676.221l-30.38876-1.12278.7792-9.786s-7.01279-14.80478-2.3376-24.15517,14.80478-78.6991,14.80478-78.6991l-5.45439-56.88152-40.51835,20.25917s21.03837,11.688,19.48,19.48c0,0,12.46718,3.11679,9.35038,10.90878l4.6752,9.35039-10.90879,17.14238s-73.2447-43.63515-67.01111-65.45272,45.19354-37.40155,45.19354-37.40155l3.1168-23.376-2.68732-12.73714,54.51749-20.95656Z" transform="translate(-186.80906 -197.435)" fill="#2f2e41"/><path d="M1012.19094,702.565h-444a1,1,0,0,1,0-2h444a1,1,0,0,1,0,2Z" transform="translate(-186.80906 -197.435)" fill="#cbcbcb"/></svg>
-          </div>
+            <div class="w-5/6 sm:w-1/2 p-6">
+                <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+                    Simplify Your Thoughts
+                </h3>
+                <p class="text-gray-600 mb-8">
+                    Brainsdump isn't just another note-taking app; it's your daily thought organizer. No formatting, no
+                    fuss – just jot down your ideas, and let our AI do the rest. Say goodbye to the clutter and hello to
+                    seamless, structured graphs of your thoughts, connected in a way that makes sense.
+                    <br/>
+                    <br/>
+                </p>
+            </div>
+            <div class="w-full sm:w-1/2 p-6">
+                <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" class="w-full sm:h-64 mx-auto"
+                     viewBox="0 0 1177 598.5" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path id="e73ea6d0-018f-4f1a-b9fb-ec835afd7d29-319" data-name="Path 438"
+                          d="M958.436,653.57547a24.21462,24.21462,0,0,1-23.38268-4.11877c-8.18977-6.87442-10.758-18.196-12.84671-28.68191l-6.17973-31.01657,12.9377,8.90836c9.30465,6.40641,18.81827,13.01866,25.26011,22.29785s9.25223,21.94708,4.07792,31.988"
+                          transform="translate(-186.80906 -197.435)" fill="#e6e6e6"/>
+                    <path id="adfa37d6-6055-4e93-a6c7-1993979ff9f6-320" data-name="Path 439"
+                          d="M956.43833,693.286c1.62839-11.86369,3.30382-23.88079,2.15884-35.87167-1.01466-10.64933-4.26373-21.04881-10.87831-29.57938a49.20592,49.20592,0,0,0-12.62466-11.44039c-1.26215-.79648-2.42409,1.20354-1.16733,1.997a46.7794,46.7794,0,0,1,18.50446,22.32562c4.02858,10.24607,4.67545,21.41582,3.98154,32.30029-.41944,6.58218-1.31074,13.12121-2.20588,19.65252a1.19816,1.19816,0,0,0,.808,1.4225,1.16347,1.16347,0,0,0,1.42253-.808Z"
+                          transform="translate(-186.80906 -197.435)" fill="#f2f2f2"/>
+                    <path id="ab8f3b7e-46a3-4c45-91c1-6e6ed9e46d7b-321" data-name="Path 442"
+                          d="M944.7173,674.24958a17.82512,17.82512,0,0,1-15.53141,8.01861c-7.8644-.37318-14.41806-5.85972-20.31713-11.07026l-17.452-15.40881,11.54987-.5528c8.3062-.39784,16.82672-.771,24.73814,1.79338s15.20757,8.72639,16.654,16.9154"
+                          transform="translate(-186.80906 -197.435)" fill="#e6e6e6"/>
+                    <path id="a06078c2-c2e6-4e9e-9e9d-932246ef76f7-322" data-name="Path 443"
+                          d="M961.04131,700.10571c-7.83972-13.87142-16.93234-29.28794-33.1808-34.21551a37.02581,37.02581,0,0,0-13.95544-1.44105c-1.4819.128-1.1118,2.41174.367,2.28454a34.39821,34.39821,0,0,1,22.27164,5.89215c6.27994,4.27453,11.16975,10.21755,15.30781,16.51907,2.53511,3.8605,4.80577,7.88445,7.07642,11.903C959.65349,702.33242,961.77532,701.40488,961.04131,700.10571Z"
+                          transform="translate(-186.80906 -197.435)" fill="#f2f2f2"/>
+                    <polygon
+                            points="494.22 150.5 494.22 282.58 189.16 282.58 189.16 352.71 108.51 352.71 108.51 150.5 494.22 150.5"
+                            fill="#fff"/>
+                    <path d="M291.80906,344.435v209.22h84.16015v-7.01H298.81906V351.445h378.71v128.57h7.01V344.435Z"
+                          transform="translate(-186.80906 -197.435)" fill="#e5e5e5"/>
+                    <rect x="189.35419" y="225.34781" width="244.49561" height="8.63082" fill="#e5e5e5"/>
+                    <rect x="189.35419" y="247.78794" width="244.49561" height="8.63082" fill="#e5e5e5"/>
+                    <rect x="189.35419" y="270.22806" width="244.49561" height="8.63082" fill="#e5e5e5"/>
+                    <circle cx="174.51342" cy="229.98892" r="5.63266" fill="#e5e5e5"/>
+                    <polygon points="389.22 3.5 389.22 135.58 84.16 135.58 84.16 205.71 3.51 205.71 3.51 3.5 389.22 3.5"
+                             fill="#fff"/>
+                    <path d="M186.80906,197.435v209.22h84.16015v-7.01H193.81906v-195.2h378.71v128.57h7.01V197.435Z"
+                          transform="translate(-186.80906 -197.435)" fill="#f1f1f1"/>
+                    <rect x="84.35419" y="78.34781" width="244.49561" height="8.63082" fill="#f1f1f1"/>
+                    <rect x="84.35419" y="100.78794" width="244.49561" height="8.63082" fill="#f1f1f1"/>
+                    <rect x="84.35419" y="123.22806" width="244.49561" height="8.63082" fill="#f1f1f1"/>
+                    <circle cx="69.51342" cy="82.98892" r="5.63266" fill="#f1f1f1"/>
+                    <rect x="209.77619" y="299.41412" width="385.71729" height="202.20937" fill="#fff"/>
+                    <path d="M785.80906,702.565H393.07873V493.3426H785.80906Zm-385.71729-7.013H778.796V500.35564H400.09177Z"
+                          transform="translate(-186.80906 -197.435)" fill="#cbcbcb"/>
+                    <rect x="290.20038" y="374.57656" width="244.49561" height="8.63082" fill="#6c63ff"/>
+                    <rect x="290.20038" y="397.01669" width="244.49561" height="8.63082" fill="#6c63ff"/>
+                    <rect x="290.20038" y="419.45681" width="244.49561" height="8.63082" fill="#6c63ff"/>
+                    <circle cx="275.35962" cy="379.21767" r="5.63266" fill="#6c63ff"/>
+                    <path d="M725.44621,493.35007a10.06737,10.06737,0,0,1,3.92234-14.93042l27.89641-87.347,19.4284,10.09245-33.53042,82.68569a10.12188,10.12188,0,0,1-17.71673,9.49924Z"
+                          transform="translate(-186.80906 -197.435)" fill="#9f616a"/>
+                    <path d="M748.2368,403.1514a4.50917,4.50917,0,0,1,.02119-3.75868l9.55481-20.54247a12.53637,12.53637,0,0,1,24.06046,7.05209l-3.1935,22.50386a4.51406,4.51406,0,0,1-5.7515,3.69356l-21.85912-6.47651A4.509,4.509,0,0,1,748.2368,403.1514Z"
+                          transform="translate(-186.80906 -197.435)" fill="#6c63ff"/>
+                    <polygon points="642.019 209.183 640.461 231.001 587.475 249.702 586.696 228.663 642.019 209.183"
+                             fill="#9f616a"/>
+                    <path d="M761.038,374.671l17.14237-12.46718,28.05117-7.792,23.376,4.67519,3.896,36.62235-4.67519,23.376-60.77752,14.02558-6.2336-10.90878s-14.02558-14.02558-3.11679-29.60956Z"
+                          transform="translate(-186.80906 -197.435)" fill="#6c63ff"/>
+                    <path d="M754.80436,342.67164V322.20853a32.64353,32.64353,0,1,1,65.28706,0v20.46311a4.3899,4.3899,0,0,1-4.385,4.385H759.18932A4.38991,4.38991,0,0,1,754.80436,342.67164Z"
+                          transform="translate(-186.80906 -197.435)" fill="#2f2e41"/>
+                    <circle cx="599.32681" cy="125.4871" r="23.93309" fill="#9f616a"/>
+                    <path d="M761.54594,322.82992a2.43626,2.43626,0,0,1-.57024-1.9422l2.835-19.7418a2.43962,2.43962,0,0,1,1.37838-1.86989c14.47068-6.7725,29.145-6.78107,43.61567-.02569a2.4548,2.4548,0,0,1,1.39218,1.98408l1.89249,19.76749a2.43565,2.43565,0,0,1-2.42514,2.66827h-4.79961a2.44551,2.44551,0,0,1-2.20747-1.4055l-2.07138-4.43825a1.46155,1.46155,0,0,0-2.77486.43679l-.40918,3.27253a2.4396,2.4396,0,0,1-2.41729,2.13443H763.387A2.43621,2.43621,0,0,1,761.54594,322.82992Z"
+                          transform="translate(-186.80906 -197.435)" fill="#2f2e41"/>
+                    <path d="M865.4392,483.15889a10.06731,10.06731,0,0,1-6.97655-13.77062L821.35,385.54107l21.23033-5.34724,29.80474,84.10047a10.12188,10.12188,0,0,1-6.94588,18.86459Z"
+                          transform="translate(-186.80906 -197.435)" fill="#9f616a"/>
+                    <path d="M822.61484,400.56782a4.50922,4.50922,0,0,1-2.479-2.82535L813.647,376.03573a12.53637,12.53637,0,0,1,22.67679-10.69584l12.54864,18.95135a4.514,4.514,0,0,1-1.85016,6.5802L826.374,400.53662A4.509,4.509,0,0,1,822.61484,400.56782Z"
+                          transform="translate(-186.80906 -197.435)" fill="#6c63ff"/>
+                    <polygon points="639.353 490.356 625.845 490.355 619.419 438.253 639.355 438.254 639.353 490.356"
+                             fill="#9f616a"/>
+                    <path d="M829.60666,700.88487l-43.55544-.00162v-.5509a16.95391,16.95391,0,0,1,16.953-16.95273h.00107l26.60219.00108Z"
+                          transform="translate(-186.80906 -197.435)" fill="#2f2e41"/>
+                    <polygon points="629.087 380.349 619.878 390.231 577.378 359.413 590.97 344.828 629.087 380.349"
+                             fill="#9f616a"/>
+                    <path d="M827.8241,584.18961l-29.69366,31.86476-.40305-.37556a16.95391,16.95391,0,0,1-.84575-23.96l.00074-.00079,18.13594-19.46185Z"
+                          transform="translate(-186.80906 -197.435)" fill="#2f2e41"/>
+                    <path d="M830.38667,428.43574l4.32015,4.32016c21.60958,21.60958,26.92973,51.573,24.33455,82.02316a85.20579,85.20579,0,0,1-2.16194,13.39415c-7.792,31.168-3.1168,130.90543-18.70078,137.139L835.06186,676.221l-30.38876-1.12278.7792-9.786s-7.01279-14.80478-2.3376-24.15517,14.80478-78.6991,14.80478-78.6991l-5.45439-56.88152-40.51835,20.25917s21.03837,11.688,19.48,19.48c0,0,12.46718,3.11679,9.35038,10.90878l4.6752,9.35039-10.90879,17.14238s-73.2447-43.63515-67.01111-65.45272,45.19354-37.40155,45.19354-37.40155l3.1168-23.376-2.68732-12.73714,54.51749-20.95656Z"
+                          transform="translate(-186.80906 -197.435)" fill="#2f2e41"/>
+                    <path d="M1012.19094,702.565h-444a1,1,0,0,1,0-2h444a1,1,0,0,1,0,2Z"
+                          transform="translate(-186.80906 -197.435)" fill="#cbcbcb"/>
+                </svg>
+            </div>
         </div>
         <div class="flex flex-wrap flex-col-reverse sm:flex-row">
-          <div class="w-full sm:w-1/2 p-6 mt-6">
-            <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" class="w-5/6 sm:h-64 mx-auto" viewBox="0 0 1176.60617 873.97852" ><path d="M875.74982,529.19691a10.05579,10.05579,0,0,1,4.89934-14.62027l-1.4214-35.70656,15.89673,9.59831-1.08735,32.436a10.11027,10.11027,0,0,1-18.28732,8.29248Z" transform="translate(-221.51983 -213.31996)" fill="#a0616a"/><path d="M896.96714,506.04938l-14.13241,2.258a4.49982,4.49982,0,0,1-5.17019-3.85125l-5.97915-45.0295-29.54482-40.43167a13.57917,13.57917,0,0,1,3.6527-19.45295l-.001-.00009a13.57859,13.57859,0,0,1,18.7536,4.13l30.17438,47.21821,6.0057,50.18109a4.55393,4.55393,0,0,1,.01317.96485A4.48579,4.48579,0,0,1,896.96714,506.04938Z" transform="translate(-221.51983 -213.31996)" fill="#6c63ff"/><polygon points="626.725 459.863 614.465 459.863 608.633 412.575 626.727 412.576 626.725 459.863" fill="#a0616a"/><path d="M605.70782,456.35988h23.64387a0,0,0,0,1,0,0v14.88687a0,0,0,0,1,0,0H590.821a0,0,0,0,1,0,0v0A14.88686,14.88686,0,0,1,605.70782,456.35988Z" fill="#2f2e41"/><polygon points="678.45 438.879 669.29 447.027 635.145 413.36 647.021 403.547 678.45 438.879" fill="#a0616a"/><path d="M885.77919,658.75819h23.64387a0,0,0,0,1,0,0v14.88687a0,0,0,0,1,0,0H870.89234a0,0,0,0,1,0,0v0A14.88686,14.88686,0,0,1,885.77919,658.75819Z" transform="translate(-439.24026 546.75064) rotate(-41.65452)" fill="#2f2e41"/><path d="M725.04291,402.777a10.05579,10.05579,0,0,1,12.32413,9.26669l34.32739,9.9302-14.12827,12.051L727.1343,422.7474a10.11027,10.11027,0,0,1-2.09139-19.97042Z" transform="translate(-221.51983 -213.31996)" fill="#a0616a"/><circle cx="610.54695" cy="130.6278" r="24.56103" fill="#a0616a"/><path d="M849.74968,664.32848,832.686,662.96324a4.49731,4.49731,0,0,1-4.13867-4.33691l-4.7627-143.833a4.48928,4.48928,0,0,1,3.87573-4.60547l34.01978-4.74707a4.49957,4.49957,0,0,1,5.05762,5.21387l-13.01807,76.249a3.51377,3.51377,0,0,0-.0498.63477l.93847,72.24512a4.50116,4.50116,0,0,1-4.50268,4.55957C849.98723,664.34313,849.86833,664.33824,849.74968,664.32848Z" transform="translate(-221.51983 -213.31996)" fill="#2f2e41"/><path d="M871.60368,647.0775l-58.61914-65.23828a4.50392,4.50392,0,0,1-1.12744-3.48438l7.40332-69.40527a4.49279,4.49279,0,0,1,4.77368-4.01269l35.97583,2.39843a4.49985,4.49985,0,0,1,3.96363,5.93067l-21.55518,63.76758a3.48717,3.48717,0,0,0,.79712,3.55078l49.79273,51.60351a4.50015,4.50015,0,0,1-.949,6.999l-14.81909,8.75683a4.51037,4.51037,0,0,1-5.63648-.86621Z" transform="translate(-221.51983 -213.31996)" fill="#2f2e41"/><path d="M827.66521,383.68s15-13,22-6c0,0,32.5,20.5,18.5,76.5,0,0,12,54,7,56s-55.5,9.5-59.5,3.5S809.66521,415.68,827.66521,383.68Z" transform="translate(-221.51983 -213.31996)" fill="#6c63ff"/><path d="M740.30326,430.21974l2.32172-14.12209a4.49983,4.49983,0,0,1,5.2872-3.689l44.61268,8.5507L840.219,405.69863a13.57916,13.57916,0,0,1,17.30317,9.61039l.0004-.00089a13.57861,13.57861,0,0,1-9.84233,16.48887l-54.332,13.71439-49.5089-10.15277a4.55367,4.55367,0,0,1-.9196-.29228A4.48577,4.48577,0,0,1,740.30326,430.21974Z" transform="translate(-221.51983 -213.31996)" fill="#6c63ff"/><path d="M842.60633,363.87051c2.2445-5.19456,4.14379-12.11252-.16123-15.78514-2.49712-2.13029-6.09384-2.13468-9.36546-2.39971-9.21731-.74669-18.70553-4.98771-23.21077-13.06356s-1.98923-20.08442,6.51023-23.728c5.72923-2.456,12.29743-.78291,18.29444.91767l18.0058,5.10593c5.35005,1.51712,10.96737,3.19025,14.81895,7.20148,6.14269,6.3973,5.68351,17.21167.80459,24.618S856.07654,361.868,847.66521,364.68Z" transform="translate(-221.51983 -213.31996)" fill="#2f2e41"/><path d="M977.48017,686.68h-248a1,1,0,0,1,0-2h248a1,1,0,0,1,0,2Z" transform="translate(-221.51983 -213.31996)" fill="#3f3d56"/><path d="M715.51983,213.32h-487a7.00778,7.00778,0,0,0-7,7v360a7.00778,7.00778,0,0,0,7,7h487a7.00778,7.00778,0,0,0,7-7v-360A7.00778,7.00778,0,0,0,715.51983,213.32Zm5,367a5.002,5.002,0,0,1-5,5h-487a5.002,5.002,0,0,1-5-5v-360a5.002,5.002,0,0,1,5-5h487a5.002,5.002,0,0,1,5,5Z" transform="translate(-221.51983 -213.31996)" fill="#3f3d56"/><rect x="1" y="28.03998" width="499" height="2" fill="#3f3d56"/><circle cx="18" cy="15" r="6" fill="#3f3d56"/><circle cx="35.25" cy="15" r="6" fill="#3f3d56"/><circle cx="52.5" cy="15" r="6" fill="#3f3d56"/><path d="M523.34267,524.62473a1,1,0,0,1-1-1v-41a1,1,0,0,1,2,0v41A1.00005,1.00005,0,0,1,523.34267,524.62473Z" transform="translate(-221.51983 -213.31996)" fill="#3f3d56"/><path d="M521.97182,466.62473a.99478.99478,0,0,1-.50244-.13574l-56.81519-33.104a1.00019,1.00019,0,0,1,1.00684-1.72852l56.81518,33.104a1.00012,1.00012,0,0,1-.50439,1.86425Z" transform="translate(-221.51983 -213.31996)" fill="#3f3d56"/><path d="M408.34364,466.62473a1.00012,1.00012,0,0,1-.50439-1.86425l56.81494-33.104A1.00019,1.00019,0,0,1,465.661,433.385l-56.815,33.104A.9994.9994,0,0,1,408.34364,466.62473Z" transform="translate(-221.51983 -213.31996)" fill="#3f3d56"/><path d="M580.97182,516.62473a.99478.99478,0,0,1-.50244-.13574l-56.81519-33.104a1.00019,1.00019,0,0,1,1.00684-1.72852l56.81518,33.104a1.00012,1.00012,0,0,1-.50439,1.86425Z" transform="translate(-221.51983 -213.31996)" fill="#3f3d56"/><path d="M467.34364,516.62473a1.00012,1.00012,0,0,1-.50439-1.86425l56.81494-33.104A1.00019,1.00019,0,0,1,524.661,483.385l-56.815,33.104A.99908.99908,0,0,1,467.34364,516.62473Z" transform="translate(-221.51983 -213.31996)" fill="#3f3d56"/><path d="M465.34267,415.62473a.99984.99984,0,0,1-1-.99755L464.25014,378.24a.99989.99989,0,0,1,.99756-1.00244h.00244a.99985.99985,0,0,1,1,.99756l.09253,36.3872a.99989.99989,0,0,1-.99756,1.00244Z" transform="translate(-221.51983 -213.31996)" fill="#3f3d56"/><path d="M478.27626,434.54075h-26.052a4.50508,4.50508,0,0,1-4.5-4.5V416.6594a4.50508,4.50508,0,0,1,4.5-4.5h26.052a4.50508,4.50508,0,0,1,4.5,4.5v13.38135A4.50508,4.50508,0,0,1,478.27626,434.54075Z" transform="translate(-221.51983 -213.31996)" fill="#ccc"/><path d="M435.15761,366.52073H379.72414a1,1,0,0,1,0-2h55.43347a1,1,0,0,1,0,2Z" transform="translate(-221.51983 -213.31996)" fill="#3f3d56"/><path d="M465.25014,352.23753a1.00005,1.00005,0,0,1-1-1v-34.6128a1,1,0,0,1,2,0v34.6128A1.00006,1.00006,0,0,1,465.25014,352.23753Z" transform="translate(-221.51983 -213.31996)" fill="#3f3d56"/><path d="M358.15675,366.52073a.99564.99564,0,0,1-.50891-.13965l-53.81506-31.896a1.0001,1.0001,0,0,1,1.01977-1.72071l53.81507,31.896a1.00009,1.00009,0,0,1-.51087,1.86035Z" transform="translate(-221.51983 -213.31996)" fill="#3f3d56"/><path d="M304.34364,398.41673a1.00009,1.00009,0,0,1-.51086-1.86036l53.81506-31.896a1.00009,1.00009,0,0,1,1.01978,1.7207l-53.81507,31.896A.99573.99573,0,0,1,304.34364,398.41673Z" transform="translate(-221.51983 -213.31996)" fill="#3f3d56"/><path d="M375.72414,382.65061H362.34267a4.505,4.505,0,0,1-4.5-4.5V352.09886a4.505,4.505,0,0,1,4.5-4.5h13.38147a4.505,4.505,0,0,1,4.5,4.5v26.05175A4.505,4.505,0,0,1,375.72414,382.65061Z" transform="translate(-221.51983 -213.31996)" fill="#ccc"/><path d="M478.27626,319.31565h-26.052a4.50508,4.50508,0,0,1-4.5-4.5V301.43382a4.50508,4.50508,0,0,1,4.5-4.5h26.052a4.50508,4.50508,0,0,1,4.5,4.5v13.38183A4.50508,4.50508,0,0,1,478.27626,319.31565Z" transform="translate(-221.51983 -213.31996)" fill="#ccc"/><path d="M300.72414,351.65061H287.34267a4.505,4.505,0,0,1-4.5-4.5V321.09886a4.505,4.505,0,0,1,4.5-4.5h13.38147a4.505,4.505,0,0,1,4.5,4.5v26.05175A4.505,4.505,0,0,1,300.72414,351.65061Z" transform="translate(-221.51983 -213.31996)" fill="#ccc"/><path d="M300.72414,414.65061H287.34267a4.505,4.505,0,0,1-4.5-4.5V384.09886a4.505,4.505,0,0,1,4.5-4.5h13.38147a4.505,4.505,0,0,1,4.5,4.5v26.05175A4.505,4.505,0,0,1,300.72414,414.65061Z" transform="translate(-221.51983 -213.31996)" fill="#ccc"/><path d="M550.77626,366.52073H495.34267a1,1,0,0,1,0-2h55.43359a1,1,0,0,1,0,2Z" transform="translate(-221.51983 -213.31996)" fill="#3f3d56"/><path d="M572.34364,366.52073a1,1,0,0,1-.51074-1.86035l53.81494-31.896a1,1,0,1,1,1.01953,1.72071l-53.81494,31.896A.99522.99522,0,0,1,572.34364,366.52073Z" transform="translate(-221.51983 -213.31996)" fill="#3f3d56"/><path d="M626.15663,398.41673a.99531.99531,0,0,1-.50879-.13965l-53.81494-31.896a1,1,0,1,1,1.01953-1.7207l53.81494,31.896a1,1,0,0,1-.51074,1.86036Z" transform="translate(-221.51983 -213.31996)" fill="#3f3d56"/><path d="M568.15761,382.65061H554.77626a4.50508,4.50508,0,0,1-4.5-4.5V352.09886a4.50508,4.50508,0,0,1,4.5-4.5h13.38135a4.50508,4.50508,0,0,1,4.5,4.5v26.05175A4.50508,4.50508,0,0,1,568.15761,382.65061Z" transform="translate(-221.51983 -213.31996)" fill="#ccc"/><path d="M643.15761,351.65061H629.77626a4.50508,4.50508,0,0,1-4.5-4.5V321.09886a4.50508,4.50508,0,0,1,4.5-4.5h13.38135a4.50508,4.50508,0,0,1,4.5,4.5v26.05175A4.50508,4.50508,0,0,1,643.15761,351.65061Z" transform="translate(-221.51983 -213.31996)" fill="#ccc"/><path d="M643.15761,414.65061H629.77626a4.50508,4.50508,0,0,1-4.5-4.5V384.09886a4.50508,4.50508,0,0,1,4.5-4.5h13.38135a4.50508,4.50508,0,0,1,4.5,4.5v26.05175A4.50508,4.50508,0,0,1,643.15761,414.65061Z" transform="translate(-221.51983 -213.31996)" fill="#ccc"/><path d="M420.27614,485.54075h-26.052a4.505,4.505,0,0,1-4.5-4.5V467.6594a4.505,4.505,0,0,1,4.5-4.5h26.052a4.505,4.505,0,0,1,4.5,4.5v13.38135A4.505,4.505,0,0,1,420.27614,485.54075Z" transform="translate(-221.51983 -213.31996)" fill="#ccc"/><path d="M536.0912,485.54075h-26.052a4.50508,4.50508,0,0,1-4.5-4.5V467.6594a4.50508,4.50508,0,0,1,4.5-4.5h26.052a4.50508,4.50508,0,0,1,4.5,4.5v13.38135A4.50508,4.50508,0,0,1,536.0912,485.54075Z" transform="translate(-221.51983 -213.31996)" fill="#ccc"/><path d="M483.0912,534.54075h-26.052a4.50508,4.50508,0,0,1-4.5-4.5V516.6594a4.50508,4.50508,0,0,1,4.5-4.5h26.052a4.50508,4.50508,0,0,1,4.5,4.5v13.38135A4.50508,4.50508,0,0,1,483.0912,534.54075Z" transform="translate(-221.51983 -213.31996)" fill="#ccc"/><path d="M594.0912,534.54075h-26.052a4.50508,4.50508,0,0,1-4.5-4.5V516.6594a4.50508,4.50508,0,0,1,4.5-4.5h26.052a4.50508,4.50508,0,0,1,4.5,4.5v13.38135A4.50508,4.50508,0,0,1,594.0912,534.54075Z" transform="translate(-221.51983 -213.31996)" fill="#ccc"/><path d="M536.0912,534.54075h-26.052a4.50508,4.50508,0,0,1-4.5-4.5V516.6594a4.50508,4.50508,0,0,1,4.5-4.5h26.052a4.50508,4.50508,0,0,1,4.5,4.5v13.38135A4.50508,4.50508,0,0,1,536.0912,534.54075Z" transform="translate(-221.51983 -213.31996)" fill="#ccc"/><path d="M496.91933,382.91673H433.581a4.50508,4.50508,0,0,1-4.5-4.5v-25.792a4.50508,4.50508,0,0,1,4.5-4.5h63.33838a4.50508,4.50508,0,0,1,4.5,4.5v25.792A4.50508,4.50508,0,0,1,496.91933,382.91673Z" transform="translate(-221.51983 -213.31996)" fill="#6c63ff"/></svg>
-          </div>
-          <div class="w-full sm:w-1/2 p-6 mt-6">
-            <div class="align-middle">
-              <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
-                Unleash Potential
-              </h3>
-              <p class="text-gray-600 mb-8">
-                Unlock the full potential of your ideas with Brainsdump's innovative thought-mapping. Every note you take is an investment in your future insights                <br />
-                <br />
-              </p>
+            <div class="w-full sm:w-1/2 p-6 mt-6">
+                <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" class="w-5/6 sm:h-64 mx-auto"
+                     viewBox="0 0 1176.60617 873.97852">
+                    <path d="M875.74982,529.19691a10.05579,10.05579,0,0,1,4.89934-14.62027l-1.4214-35.70656,15.89673,9.59831-1.08735,32.436a10.11027,10.11027,0,0,1-18.28732,8.29248Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#a0616a"/>
+                    <path d="M896.96714,506.04938l-14.13241,2.258a4.49982,4.49982,0,0,1-5.17019-3.85125l-5.97915-45.0295-29.54482-40.43167a13.57917,13.57917,0,0,1,3.6527-19.45295l-.001-.00009a13.57859,13.57859,0,0,1,18.7536,4.13l30.17438,47.21821,6.0057,50.18109a4.55393,4.55393,0,0,1,.01317.96485A4.48579,4.48579,0,0,1,896.96714,506.04938Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#6c63ff"/>
+                    <polygon points="626.725 459.863 614.465 459.863 608.633 412.575 626.727 412.576 626.725 459.863"
+                             fill="#a0616a"/>
+                    <path d="M605.70782,456.35988h23.64387a0,0,0,0,1,0,0v14.88687a0,0,0,0,1,0,0H590.821a0,0,0,0,1,0,0v0A14.88686,14.88686,0,0,1,605.70782,456.35988Z"
+                          fill="#2f2e41"/>
+                    <polygon points="678.45 438.879 669.29 447.027 635.145 413.36 647.021 403.547 678.45 438.879"
+                             fill="#a0616a"/>
+                    <path d="M885.77919,658.75819h23.64387a0,0,0,0,1,0,0v14.88687a0,0,0,0,1,0,0H870.89234a0,0,0,0,1,0,0v0A14.88686,14.88686,0,0,1,885.77919,658.75819Z"
+                          transform="translate(-439.24026 546.75064) rotate(-41.65452)" fill="#2f2e41"/>
+                    <path d="M725.04291,402.777a10.05579,10.05579,0,0,1,12.32413,9.26669l34.32739,9.9302-14.12827,12.051L727.1343,422.7474a10.11027,10.11027,0,0,1-2.09139-19.97042Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#a0616a"/>
+                    <circle cx="610.54695" cy="130.6278" r="24.56103" fill="#a0616a"/>
+                    <path d="M849.74968,664.32848,832.686,662.96324a4.49731,4.49731,0,0,1-4.13867-4.33691l-4.7627-143.833a4.48928,4.48928,0,0,1,3.87573-4.60547l34.01978-4.74707a4.49957,4.49957,0,0,1,5.05762,5.21387l-13.01807,76.249a3.51377,3.51377,0,0,0-.0498.63477l.93847,72.24512a4.50116,4.50116,0,0,1-4.50268,4.55957C849.98723,664.34313,849.86833,664.33824,849.74968,664.32848Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#2f2e41"/>
+                    <path d="M871.60368,647.0775l-58.61914-65.23828a4.50392,4.50392,0,0,1-1.12744-3.48438l7.40332-69.40527a4.49279,4.49279,0,0,1,4.77368-4.01269l35.97583,2.39843a4.49985,4.49985,0,0,1,3.96363,5.93067l-21.55518,63.76758a3.48717,3.48717,0,0,0,.79712,3.55078l49.79273,51.60351a4.50015,4.50015,0,0,1-.949,6.999l-14.81909,8.75683a4.51037,4.51037,0,0,1-5.63648-.86621Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#2f2e41"/>
+                    <path d="M827.66521,383.68s15-13,22-6c0,0,32.5,20.5,18.5,76.5,0,0,12,54,7,56s-55.5,9.5-59.5,3.5S809.66521,415.68,827.66521,383.68Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#6c63ff"/>
+                    <path d="M740.30326,430.21974l2.32172-14.12209a4.49983,4.49983,0,0,1,5.2872-3.689l44.61268,8.5507L840.219,405.69863a13.57916,13.57916,0,0,1,17.30317,9.61039l.0004-.00089a13.57861,13.57861,0,0,1-9.84233,16.48887l-54.332,13.71439-49.5089-10.15277a4.55367,4.55367,0,0,1-.9196-.29228A4.48577,4.48577,0,0,1,740.30326,430.21974Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#6c63ff"/>
+                    <path d="M842.60633,363.87051c2.2445-5.19456,4.14379-12.11252-.16123-15.78514-2.49712-2.13029-6.09384-2.13468-9.36546-2.39971-9.21731-.74669-18.70553-4.98771-23.21077-13.06356s-1.98923-20.08442,6.51023-23.728c5.72923-2.456,12.29743-.78291,18.29444.91767l18.0058,5.10593c5.35005,1.51712,10.96737,3.19025,14.81895,7.20148,6.14269,6.3973,5.68351,17.21167.80459,24.618S856.07654,361.868,847.66521,364.68Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#2f2e41"/>
+                    <path d="M977.48017,686.68h-248a1,1,0,0,1,0-2h248a1,1,0,0,1,0,2Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#3f3d56"/>
+                    <path d="M715.51983,213.32h-487a7.00778,7.00778,0,0,0-7,7v360a7.00778,7.00778,0,0,0,7,7h487a7.00778,7.00778,0,0,0,7-7v-360A7.00778,7.00778,0,0,0,715.51983,213.32Zm5,367a5.002,5.002,0,0,1-5,5h-487a5.002,5.002,0,0,1-5-5v-360a5.002,5.002,0,0,1,5-5h487a5.002,5.002,0,0,1,5,5Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#3f3d56"/>
+                    <rect x="1" y="28.03998" width="499" height="2" fill="#3f3d56"/>
+                    <circle cx="18" cy="15" r="6" fill="#3f3d56"/>
+                    <circle cx="35.25" cy="15" r="6" fill="#3f3d56"/>
+                    <circle cx="52.5" cy="15" r="6" fill="#3f3d56"/>
+                    <path d="M523.34267,524.62473a1,1,0,0,1-1-1v-41a1,1,0,0,1,2,0v41A1.00005,1.00005,0,0,1,523.34267,524.62473Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#3f3d56"/>
+                    <path d="M521.97182,466.62473a.99478.99478,0,0,1-.50244-.13574l-56.81519-33.104a1.00019,1.00019,0,0,1,1.00684-1.72852l56.81518,33.104a1.00012,1.00012,0,0,1-.50439,1.86425Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#3f3d56"/>
+                    <path d="M408.34364,466.62473a1.00012,1.00012,0,0,1-.50439-1.86425l56.81494-33.104A1.00019,1.00019,0,0,1,465.661,433.385l-56.815,33.104A.9994.9994,0,0,1,408.34364,466.62473Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#3f3d56"/>
+                    <path d="M580.97182,516.62473a.99478.99478,0,0,1-.50244-.13574l-56.81519-33.104a1.00019,1.00019,0,0,1,1.00684-1.72852l56.81518,33.104a1.00012,1.00012,0,0,1-.50439,1.86425Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#3f3d56"/>
+                    <path d="M467.34364,516.62473a1.00012,1.00012,0,0,1-.50439-1.86425l56.81494-33.104A1.00019,1.00019,0,0,1,524.661,483.385l-56.815,33.104A.99908.99908,0,0,1,467.34364,516.62473Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#3f3d56"/>
+                    <path d="M465.34267,415.62473a.99984.99984,0,0,1-1-.99755L464.25014,378.24a.99989.99989,0,0,1,.99756-1.00244h.00244a.99985.99985,0,0,1,1,.99756l.09253,36.3872a.99989.99989,0,0,1-.99756,1.00244Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#3f3d56"/>
+                    <path d="M478.27626,434.54075h-26.052a4.50508,4.50508,0,0,1-4.5-4.5V416.6594a4.50508,4.50508,0,0,1,4.5-4.5h26.052a4.50508,4.50508,0,0,1,4.5,4.5v13.38135A4.50508,4.50508,0,0,1,478.27626,434.54075Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#ccc"/>
+                    <path d="M435.15761,366.52073H379.72414a1,1,0,0,1,0-2h55.43347a1,1,0,0,1,0,2Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#3f3d56"/>
+                    <path d="M465.25014,352.23753a1.00005,1.00005,0,0,1-1-1v-34.6128a1,1,0,0,1,2,0v34.6128A1.00006,1.00006,0,0,1,465.25014,352.23753Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#3f3d56"/>
+                    <path d="M358.15675,366.52073a.99564.99564,0,0,1-.50891-.13965l-53.81506-31.896a1.0001,1.0001,0,0,1,1.01977-1.72071l53.81507,31.896a1.00009,1.00009,0,0,1-.51087,1.86035Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#3f3d56"/>
+                    <path d="M304.34364,398.41673a1.00009,1.00009,0,0,1-.51086-1.86036l53.81506-31.896a1.00009,1.00009,0,0,1,1.01978,1.7207l-53.81507,31.896A.99573.99573,0,0,1,304.34364,398.41673Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#3f3d56"/>
+                    <path d="M375.72414,382.65061H362.34267a4.505,4.505,0,0,1-4.5-4.5V352.09886a4.505,4.505,0,0,1,4.5-4.5h13.38147a4.505,4.505,0,0,1,4.5,4.5v26.05175A4.505,4.505,0,0,1,375.72414,382.65061Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#ccc"/>
+                    <path d="M478.27626,319.31565h-26.052a4.50508,4.50508,0,0,1-4.5-4.5V301.43382a4.50508,4.50508,0,0,1,4.5-4.5h26.052a4.50508,4.50508,0,0,1,4.5,4.5v13.38183A4.50508,4.50508,0,0,1,478.27626,319.31565Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#ccc"/>
+                    <path d="M300.72414,351.65061H287.34267a4.505,4.505,0,0,1-4.5-4.5V321.09886a4.505,4.505,0,0,1,4.5-4.5h13.38147a4.505,4.505,0,0,1,4.5,4.5v26.05175A4.505,4.505,0,0,1,300.72414,351.65061Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#ccc"/>
+                    <path d="M300.72414,414.65061H287.34267a4.505,4.505,0,0,1-4.5-4.5V384.09886a4.505,4.505,0,0,1,4.5-4.5h13.38147a4.505,4.505,0,0,1,4.5,4.5v26.05175A4.505,4.505,0,0,1,300.72414,414.65061Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#ccc"/>
+                    <path d="M550.77626,366.52073H495.34267a1,1,0,0,1,0-2h55.43359a1,1,0,0,1,0,2Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#3f3d56"/>
+                    <path d="M572.34364,366.52073a1,1,0,0,1-.51074-1.86035l53.81494-31.896a1,1,0,1,1,1.01953,1.72071l-53.81494,31.896A.99522.99522,0,0,1,572.34364,366.52073Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#3f3d56"/>
+                    <path d="M626.15663,398.41673a.99531.99531,0,0,1-.50879-.13965l-53.81494-31.896a1,1,0,1,1,1.01953-1.7207l53.81494,31.896a1,1,0,0,1-.51074,1.86036Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#3f3d56"/>
+                    <path d="M568.15761,382.65061H554.77626a4.50508,4.50508,0,0,1-4.5-4.5V352.09886a4.50508,4.50508,0,0,1,4.5-4.5h13.38135a4.50508,4.50508,0,0,1,4.5,4.5v26.05175A4.50508,4.50508,0,0,1,568.15761,382.65061Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#ccc"/>
+                    <path d="M643.15761,351.65061H629.77626a4.50508,4.50508,0,0,1-4.5-4.5V321.09886a4.50508,4.50508,0,0,1,4.5-4.5h13.38135a4.50508,4.50508,0,0,1,4.5,4.5v26.05175A4.50508,4.50508,0,0,1,643.15761,351.65061Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#ccc"/>
+                    <path d="M643.15761,414.65061H629.77626a4.50508,4.50508,0,0,1-4.5-4.5V384.09886a4.50508,4.50508,0,0,1,4.5-4.5h13.38135a4.50508,4.50508,0,0,1,4.5,4.5v26.05175A4.50508,4.50508,0,0,1,643.15761,414.65061Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#ccc"/>
+                    <path d="M420.27614,485.54075h-26.052a4.505,4.505,0,0,1-4.5-4.5V467.6594a4.505,4.505,0,0,1,4.5-4.5h26.052a4.505,4.505,0,0,1,4.5,4.5v13.38135A4.505,4.505,0,0,1,420.27614,485.54075Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#ccc"/>
+                    <path d="M536.0912,485.54075h-26.052a4.50508,4.50508,0,0,1-4.5-4.5V467.6594a4.50508,4.50508,0,0,1,4.5-4.5h26.052a4.50508,4.50508,0,0,1,4.5,4.5v13.38135A4.50508,4.50508,0,0,1,536.0912,485.54075Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#ccc"/>
+                    <path d="M483.0912,534.54075h-26.052a4.50508,4.50508,0,0,1-4.5-4.5V516.6594a4.50508,4.50508,0,0,1,4.5-4.5h26.052a4.50508,4.50508,0,0,1,4.5,4.5v13.38135A4.50508,4.50508,0,0,1,483.0912,534.54075Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#ccc"/>
+                    <path d="M594.0912,534.54075h-26.052a4.50508,4.50508,0,0,1-4.5-4.5V516.6594a4.50508,4.50508,0,0,1,4.5-4.5h26.052a4.50508,4.50508,0,0,1,4.5,4.5v13.38135A4.50508,4.50508,0,0,1,594.0912,534.54075Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#ccc"/>
+                    <path d="M536.0912,534.54075h-26.052a4.50508,4.50508,0,0,1-4.5-4.5V516.6594a4.50508,4.50508,0,0,1,4.5-4.5h26.052a4.50508,4.50508,0,0,1,4.5,4.5v13.38135A4.50508,4.50508,0,0,1,536.0912,534.54075Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#ccc"/>
+                    <path d="M496.91933,382.91673H433.581a4.50508,4.50508,0,0,1-4.5-4.5v-25.792a4.50508,4.50508,0,0,1,4.5-4.5h63.33838a4.50508,4.50508,0,0,1,4.5,4.5v25.792A4.50508,4.50508,0,0,1,496.91933,382.91673Z"
+                          transform="translate(-221.51983 -213.31996)" fill="#6c63ff"/>
+                </svg>
             </div>
-          </div>
+            <div class="w-full sm:w-1/2 p-6 mt-6">
+                <div class="align-middle">
+                    <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+                        Unleash Potential
+                    </h3>
+                    <p class="text-gray-600 mb-8">
+                        Unlock the full potential of your ideas with Brainsdump's innovative thought-mapping. Every note
+                        you take is an investment in your future insights <br/>
+                        <br/>
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
-    <section class="bg-white border-b py-8" id="features-section">
-      <div class="container mx-auto flex flex-wrap pt-4 pb-12">
+    </div>
+</section>
+<section class="bg-white border-b py-8" id="features-section">
+    <div class="container mx-auto flex flex-wrap pt-4 pb-12">
         <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-          Features
+            Features
         </h2>
         <div class="w-full mb-4">
-          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+            <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
         <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-              <p class="w-full text-gray-600 text-xs md:text-sm px-6">
-                Simplify Your Note-Taking
-              </p>
-              <div class="w-full font-bold text-xl text-gray-800 px-6">
-                Simplify to Amplify
-              </div>
-              <p class="text-gray-800 text-base px-6 mb-5">
-                Start fresh every day with a single new note interface. Write as thoughts flow, without worrying about formatting. We streamline your creative chaos into clarity.
-              </p>
-            </a>
-          </div>
-          <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-            <div class="flex items-center justify-start">
-              <button onclick="window.location.href='#call-to-action-section'"
-                      class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                Learn More
-              </button>
+            <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+                <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+                    <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+                        Simplify Your Note-Taking
+                    </p>
+                    <div class="w-full font-bold text-xl text-gray-800 px-6">
+                        Simplify to Amplify
+                    </div>
+                    <p class="text-gray-800 text-base px-6 mb-5">
+                        Start fresh every day with a single new note interface. Write as thoughts flow, without worrying
+                        about formatting. We streamline your creative chaos into clarity.
+                    </p>
+                </a>
             </div>
-          </div>
+            <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+                <div class="flex items-center justify-start">
+                    <button onclick="window.location.href='#call-to-action-section'"
+                            class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                        Learn More
+                    </button>
+                </div>
+            </div>
         </div>
         <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-            <p class="w-full text-gray-600 text-xs md:text-sm px-6">
-                Structured Clarity from Thoughtful Chaos
-              </p>
-            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-              <div class="w-full font-bold text-xl text-gray-800 px-6">
-                Auto-Organize with AI
-              </div>
-              <p class="text-gray-800 text-base px-6 mb-5">
-                Stop searching, start finding. Our AI organizes your notes by topics, creating a clear hierarchy of your thought process.
-              </p>
-            </a>
-          </div>
-          <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-            <div class="flex items-center justify-center">
-              <button
-                      class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-                      onclick="window.location.href='#call-to-action-section'"
-              >
-                Learn More
-              </button>
+            <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+                <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+                    Structured Clarity from Thoughtful Chaos
+                </p>
+                <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+                    <div class="w-full font-bold text-xl text-gray-800 px-6">
+                        Auto-Organize with AI
+                    </div>
+                    <p class="text-gray-800 text-base px-6 mb-5">
+                        Stop searching, start finding. Our AI organizes your notes by topics, creating a clear hierarchy
+                        of your thought process.
+                    </p>
+                </a>
             </div>
-          </div>
+            <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+                <div class="flex items-center justify-center">
+                    <button
+                            class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+                            onclick="window.location.href='#call-to-action-section'"
+                    >
+                        Learn More
+                    </button>
+                </div>
+            </div>
         </div>
         <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-              <p class="w-full text-gray-600 text-xs md:text-sm px-6">
-                Focus on Thoughts, Not Tasks
-              </p>
-              <div class="w-full font-bold text-xl text-gray-800 px-6">
-                Effortless Review
-              </div>
-              <p class="text-gray-800 text-base px-6 mb-5">
-               Record with ease, review with insight. Brainsdump separates the note-taking from the organizing, so you can focus on what matters - your ideas.
-              </p>
-            </a>
-          </div>
-          <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-            <div class="flex items-center justify-end">
-              <button
-                      class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-                      onclick="window.location.href='#call-to-action-section'"
-              >
-                Learn More
-              </button>
+            <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+                <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+                    <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+                        Focus on Thoughts, Not Tasks
+                    </p>
+                    <div class="w-full font-bold text-xl text-gray-800 px-6">
+                        Effortless Review
+                    </div>
+                    <p class="text-gray-800 text-base px-6 mb-5">
+                        Record with ease, review with insight. Brainsdump separates the note-taking from the organizing,
+                        so you can focus on what matters - your ideas.
+                    </p>
+                </a>
             </div>
-          </div>
+            <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+                <div class="flex items-center justify-end">
+                    <button
+                            class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+                            onclick="window.location.href='#call-to-action-section'"
+                    >
+                        Learn More
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
-    <section class="bg-gray-100 py-8" id="pricing-section">
-      <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
+    </div>
+</section>
+<section class="bg-gray-100 py-8" id="pricing-section">
+    <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
         <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-          Pricing
+            Pricing
         </h2>
         <div class="w-full mb-4">
-          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+            <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
         <div class="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4">
-          <div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">
-            <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
-              <div class="p-8 text-3xl font-bold text-center border-b-4">
-                Free
-              </div>
-              <ul class="w-full text-center text-sm">
-                <li class="border-b py-4">Basic Note-taking & AI formatting</li>
-                <li class="border-b py-4">Graph created from hashtags</li>
-                <li class="border-b py-4">Monthly AI auto-organize</li>
-              </ul>
+            <div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">
+                <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
+                    <div class="p-8 text-3xl font-bold text-center border-b-4">
+                        Free
+                    </div>
+                    <ul class="w-full text-center text-sm">
+                        <li class="border-b py-4">Basic Note-taking & AI formatting</li>
+                        <li class="border-b py-4">Graph created from hashtags</li>
+                        <li class="border-b py-4">Monthly AI auto-organize</li>
+                    </ul>
+                </div>
+                <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+                    <div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">
+                        $0
+                        <span class="text-base">per month</span>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <button class="register-btn mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                            Sign Up
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-              <div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">
-                $0
-                <span class="text-base">per month</span>
-              </div>
-              <div class="flex items-center justify-center">
-                <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                  Sign Up
-                </button>
-              </div>
+            <div class="flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg bg-white mt-4 sm:-mt-6 shadow-lg z-10">
+                <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+                    <div class="w-full p-8 text-3xl font-bold text-center">Basic</div>
+                    <div class="h-1 w-full gradient my-0 py-0 rounded-t"></div>
+                    <ul class="w-full text-center text-base font-bold">
+                        <li class="border-b py-4">Basic Note-taking & AI formatting</li>
+                        <li class="border-b py-4">Graph created from hashtags</li>
+                        <li class="border-b py-4">Daily AI auto-organize</li>
+                    </ul>
+                </div>
+                <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+                    <div class="w-full pt-6 text-4xl font-bold text-center">
+                        $7.99
+                        <span class="text-base">/ per month</span>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <button class="register-btn mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                            Sign Up
+                        </button>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg bg-white mt-4 sm:-mt-6 shadow-lg z-10">
-            <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-              <div class="w-full p-8 text-3xl font-bold text-center">Basic</div>
-              <div class="h-1 w-full gradient my-0 py-0 rounded-t"></div>
-              <ul class="w-full text-center text-base font-bold">
-                <li class="border-b py-4">Basic Note-taking & AI formatting</li>
-                <li class="border-b py-4">Graph created from hashtags</li>
-                <li class="border-b py-4">Daily AI auto-organize</li>
-              </ul>
+            <div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">
+                <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
+                    <div class="p-8 text-3xl font-bold text-center border-b-4">
+                        Pro
+                    </div>
+                    <ul class="w-full text-center text-sm">
+                        <li class="border-b py-4">Basic Note-taking & AI formatting</li>
+                        <li class="border-b py-4">Graph created from hashtags</li>
+                        <li class="border-b py-4">AI auto-organize anytime</li>
+                        <li class="border-b py-4">AI Graph view</li>
+                        <li class="border-b py-4">Access to latest features</li>
+                    </ul>
+                </div>
+                <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+                    <div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">
+                        $14.99
+                        <span class="text-base">/ per month</span>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <button class="register-btn mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                            Sign Up
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-              <div class="w-full pt-6 text-4xl font-bold text-center">
-                $7.99
-                <span class="text-base">/ per month</span>
-              </div>
-              <div class="flex items-center justify-center">
-                <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                  Sign Up
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">
-            <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
-              <div class="p-8 text-3xl font-bold text-center border-b-4">
-                Pro
-              </div>
-              <ul class="w-full text-center text-sm">
-                <li class="border-b py-4">Basic Note-taking & AI formatting</li>
-                <li class="border-b py-4">Graph created from hashtags</li>
-                <li class="border-b py-4">AI auto-organize anytime</li>
-                <li class="border-b py-4">AI Graph view</li>
-                <li class="border-b py-4">Access to latest features</li>
-              </ul>
-            </div>
-            <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-              <div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">
-                $14.99
-                <span class="text-base">/ per month</span>
-              </div>
-              <div class="flex items-center justify-center">
-                <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                  Sign Up
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
-    <!-- Change the colour #f8fafc to match the previous section colour -->
-    <svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    </div>
+</section>
+<!-- Change the colour #f8fafc to match the previous section colour -->
+<svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g transform="translate(-1.000000, -14.000000)" fill-rule="nonzero">
-          <g class="wave" fill="#f8fafc">
-            <path
-              d="M1440,84 C1383.555,64.3 1342.555,51.3 1317,45 C1259.5,30.824 1206.707,25.526 1169,22 C1129.711,18.326 1044.426,18.475 980,22 C954.25,23.409 922.25,26.742 884,32 C845.122,37.787 818.455,42.121 804,45 C776.833,50.41 728.136,61.77 713,65 C660.023,76.309 621.544,87.729 584,94 C517.525,105.104 484.525,106.438 429,108 C379.49,106.484 342.823,104.484 319,102 C278.571,97.783 231.737,88.736 205,84 C154.629,75.076 86.296,57.743 0,32 L0,0 L1440,0 L1440,84 Z"
-            ></path>
-          </g>
-          <g transform="translate(1.000000, 15.000000)" fill="#FFFFFF">
-            <g transform="translate(719.500000, 68.500000) rotate(-180.000000) translate(-719.500000, -68.500000) ">
-              <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496" opacity="0.100000001"></path>
-              <path
-                d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
-                opacity="0.100000001"
-              ></path>
-              <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z" opacity="0.200000003"></path>
-            </g>
-          </g>
-        </g>
-      </g>
-    </svg>
-    <section class="container mx-auto text-center py-6 mb-12" id="call-to-action-section">
-      <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
-        Start with Brainsdump Today!
-      </h2>
-      <div class="w-full mb-4">
-        <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
-      </div>
-      <h3 class="my-4 text-3xl leading-tight">
-        Ready to revolutionize your note-taking?
-      </h3>
-      <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-        Register Now
-      </button>
-    </section>
-    <!--Footer-->
-    <footer class="bg-white">
-      <div class="container mx-auto px-8">
-        <div class="w-full flex flex-col md:flex-row py-6">
-          <div class="flex-1 mb-6 text-black">
-            <a class="text-pink-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
-              <!--Icon from: http://www.potlabicons.com/ -->
-              <svg class="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.005 512.005">
-                <rect fill="#2a2a31" x="16.539" y="425.626" width="479.767" height="50.502" transform="matrix(1,0,0,1,0,0)" />
+            <g class="wave" fill="#f8fafc">
                 <path
-                  class="plane-take-off"
-                  d=" M 510.7 189.151 C 505.271 168.95 484.565 156.956 464.365 162.385 L 330.156 198.367 L 155.924 35.878 L 107.19 49.008 L 211.729 230.183 L 86.232 263.767 L 36.614 224.754 L 0 234.603 L 45.957 314.27 L 65.274 347.727 L 105.802 336.869 L 240.011 300.886 L 349.726 271.469 L 483.935 235.486 C 504.134 230.057 516.129 209.352 510.7 189.151 Z "
-                />
-              </svg>
-              BRAINSDUMP
-            </a>
-          </div>
-          <div class="flex-1">
-            <p class="uppercase text-gray-500 md:mb-6">Legal</p>
-            <ul class="list-reset mb-6">
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="/terms-and-condition.html" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Terms</a>
-              </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="/privacy-policy.html" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Privacy</a>
-              </li>
-            </ul>
-          </div>
-          <div class="flex-1">
-            <p class="uppercase text-gray-500 md:mb-6">Contact</p>
-            <ul class="list-reset mb-6">
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Facebook</a>
-              </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Email</a>
-              </li>
-            </ul>
-          </div>
+                        d="M1440,84 C1383.555,64.3 1342.555,51.3 1317,45 C1259.5,30.824 1206.707,25.526 1169,22 C1129.711,18.326 1044.426,18.475 980,22 C954.25,23.409 922.25,26.742 884,32 C845.122,37.787 818.455,42.121 804,45 C776.833,50.41 728.136,61.77 713,65 C660.023,76.309 621.544,87.729 584,94 C517.525,105.104 484.525,106.438 429,108 C379.49,106.484 342.823,104.484 319,102 C278.571,97.783 231.737,88.736 205,84 C154.629,75.076 86.296,57.743 0,32 L0,0 L1440,0 L1440,84 Z"
+                ></path>
+            </g>
+            <g transform="translate(1.000000, 15.000000)" fill="#FFFFFF">
+                <g transform="translate(719.500000, 68.500000) rotate(-180.000000) translate(-719.500000, -68.500000) ">
+                    <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496"
+                          opacity="0.100000001"></path>
+                    <path
+                            d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
+                            opacity="0.100000001"
+                    ></path>
+                    <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z"
+                          opacity="0.200000003"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
+<section class="container mx-auto text-center py-6 mb-12" id="call-to-action-section">
+    <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
+        Start with Brainsdump Today!
+    </h2>
+    <div class="w-full mb-4">
+        <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
+    </div>
+    <h3 class="my-4 text-3xl leading-tight">
+        Ready to revolutionize your note-taking?
+    </h3>
+    <button class="register-btn mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+        Register Now
+    </button>
+</section>
+<!--Footer-->
+<footer class="bg-white">
+    <div class="container mx-auto px-8">
+        <div class="w-full flex flex-col md:flex-row py-6">
+            <div class="flex-1 mb-6 text-black">
+                <a class="text-pink-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+                    <!--Icon from: http://www.potlabicons.com/ -->
+                    <svg class="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg"
+                         viewBox="0 0 512.005 512.005">
+                        <rect fill="#2a2a31" x="16.539" y="425.626" width="479.767" height="50.502"
+                              transform="matrix(1,0,0,1,0,0)"/>
+                        <path
+                                class="plane-take-off"
+                                d=" M 510.7 189.151 C 505.271 168.95 484.565 156.956 464.365 162.385 L 330.156 198.367 L 155.924 35.878 L 107.19 49.008 L 211.729 230.183 L 86.232 263.767 L 36.614 224.754 L 0 234.603 L 45.957 314.27 L 65.274 347.727 L 105.802 336.869 L 240.011 300.886 L 349.726 271.469 L 483.935 235.486 C 504.134 230.057 516.129 209.352 510.7 189.151 Z "
+                        />
+                    </svg>
+                    BRAINSDUMP
+                </a>
+            </div>
+            <div class="flex-1">
+                <p class="uppercase text-gray-500 md:mb-6">Legal</p>
+                <ul class="list-reset mb-6">
+                    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                        <a href="/terms-and-condition.html"
+                           class="no-underline hover:underline text-gray-800 hover:text-pink-500">Terms</a>
+                    </li>
+                    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                        <a href="/privacy-policy.html"
+                           class="no-underline hover:underline text-gray-800 hover:text-pink-500">Privacy</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex-1">
+                <p class="uppercase text-gray-500 md:mb-6">Contact</p>
+                <ul class="list-reset mb-6">
+                    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                        <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Facebook</a>
+                    </li>
+                    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                        <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Email</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
-    </footer>
-    <!-- jQuery if you need it
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  -->
-    <script>
-      var scrollpos = window.scrollY;
-      var header = document.getElementById("header");
-      var navcontent = document.getElementById("nav-content");
-      var navaction = document.getElementById("navAction");
-      var brandname = document.getElementById("brandname");
-      var toToggle = document.querySelectorAll(".toggleColour");
+    </div>
+</footer>
+<!-- jQuery if you need it
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+-->
+<script>
+    var scrollpos = window.scrollY;
+    var header = document.getElementById("header");
+    var navcontent = document.getElementById("nav-content");
+    var navaction = document.getElementById("navAction");
+    var brandname = document.getElementById("brandname");
+    var toToggle = document.querySelectorAll(".toggleColour");
 
-      document.addEventListener("scroll", function () {
+    document.addEventListener("scroll", function () {
         /*Apply classes for slide in bar*/
         scrollpos = window.scrollY;
 
         if (scrollpos > 10) {
-          header.classList.add("bg-white");
-          navaction.classList.remove("bg-white");
-          navaction.classList.add("gradient");
-          navaction.classList.remove("text-gray-800");
-          navaction.classList.add("text-white");
-          //Use to switch toggleColour colours
-          for (var i = 0; i < toToggle.length; i++) {
-            toToggle[i].classList.add("text-gray-800");
-            toToggle[i].classList.remove("text-white");
-          }
-          header.classList.add("shadow");
-          navcontent.classList.remove("bg-gray-100");
-          navcontent.classList.add("bg-white");
+            header.classList.add("bg-white");
+            navaction.classList.remove("bg-white");
+            navaction.classList.add("gradient");
+            navaction.classList.remove("text-gray-800");
+            navaction.classList.add("text-white");
+            //Use to switch toggleColour colours
+            for (var i = 0; i < toToggle.length; i++) {
+                toToggle[i].classList.add("text-gray-800");
+                toToggle[i].classList.remove("text-white");
+            }
+            header.classList.add("shadow");
+            navcontent.classList.remove("bg-gray-100");
+            navcontent.classList.add("bg-white");
         } else {
-          header.classList.remove("bg-white");
-          navaction.classList.remove("gradient");
-          navaction.classList.add("bg-white");
-          navaction.classList.remove("text-white");
-          navaction.classList.add("text-gray-800");
-          //Use to switch toggleColour colours
-          for (var i = 0; i < toToggle.length; i++) {
-            toToggle[i].classList.add("text-white");
-            toToggle[i].classList.remove("text-gray-800");
-          }
+            header.classList.remove("bg-white");
+            navaction.classList.remove("gradient");
+            navaction.classList.add("bg-white");
+            navaction.classList.remove("text-white");
+            navaction.classList.add("text-gray-800");
+            //Use to switch toggleColour colours
+            for (var i = 0; i < toToggle.length; i++) {
+                toToggle[i].classList.add("text-white");
+                toToggle[i].classList.remove("text-gray-800");
+            }
 
-          header.classList.remove("shadow");
-          navcontent.classList.remove("bg-white");
-          navcontent.classList.add("bg-gray-100");
+            header.classList.remove("shadow");
+            navcontent.classList.remove("bg-white");
+            navcontent.classList.add("bg-gray-100");
         }
-      });
-    </script>
-    <script>
-      /*Toggle dropdown list*/
-      /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
+    });
+</script>
+<script>
+    /*Toggle dropdown list*/
+    /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
 
-      var navMenuDiv = document.getElementById("nav-content");
-      var navMenu = document.getElementById("nav-toggle");
+    var navMenuDiv = document.getElementById("nav-content");
+    var navMenu = document.getElementById("nav-toggle");
 
-      document.onclick = check;
-      function check(e) {
+    document.onclick = check;
+
+    function check(e) {
         var target = (e && e.target) || (event && event.srcElement);
 
         //Nav Menu
         if (!checkParent(target, navMenuDiv)) {
-          // click NOT on the menu
-          if (checkParent(target, navMenu)) {
-            // click on the link
-            if (navMenuDiv.classList.contains("hidden")) {
-              navMenuDiv.classList.remove("hidden");
+            // click NOT on the menu
+            if (checkParent(target, navMenu)) {
+                // click on the link
+                if (navMenuDiv.classList.contains("hidden")) {
+                    navMenuDiv.classList.remove("hidden");
+                } else {
+                    navMenuDiv.classList.add("hidden");
+                }
             } else {
-              navMenuDiv.classList.add("hidden");
+                // click both outside link and outside menu, hide menu
+                navMenuDiv.classList.add("hidden");
             }
-          } else {
-            // click both outside link and outside menu, hide menu
-            navMenuDiv.classList.add("hidden");
-          }
         }
-      }
-      function checkParent(t, elm) {
+    }
+
+    function checkParent(t, elm) {
         while (t.parentNode) {
-          if (t == elm) {
-            return true;
-          }
-          t = t.parentNode;
+            if (t == elm) {
+                return true;
+            }
+            t = t.parentNode;
         }
         return false;
-      }
-    </script>
-  </body>
+    }
+</script>
+<script>
+    const form = document.getElementById('signup-form');
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        const formData = new FormData(form);
+        fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                alert('Thank you for subscribing!');
+                form.reset();
+            } else {
+                response.json().then(data => {
+                    if (Object.hasOwn(data, 'errors')) {
+                        alert(data["errors"].map(error => error["message"]).join(", "));
+                    } else {
+                        alert('Oops! There was a problem submitting your form');
+                    }
+                });
+            }
+        }).catch(error => {
+            alert('Oops! There was a problem submitting your form');
+        });
+    });
+
+</script>
+<script>
+    // Get the modal
+    var modal = document.getElementById('emailModal');
+
+    // Get all buttons that opens the modal with class "registerBtn"
+    var btns = document.getElementsByClassName('register-btn');
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName('close')[0];
+
+    // Convert buttons HTMLCollection to an array to use forEach
+    Array.from(btns).forEach(function (btn) {
+        // When the user clicks the button, open the modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+    });
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+</script>
+</body>
 </html>
