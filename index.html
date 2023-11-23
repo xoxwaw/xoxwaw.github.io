@@ -113,11 +113,25 @@
         </div>
         <!--Right Col-->
         <div class="w-full md:w-3/5 py-6 text-center">
-            <img class="w-full md:w-4/5 z-50" src="brainsdump4.png"/>
+            <img class="w-full md:w-4/5 z-50 justify-center" src="brainsdump4.png"/>
+            <div class="mt-4 md:mt-8 flex justify-center space-x-4">
+                <!-- Google Play Button -->
+                <a href="#" onclick="trackPlatform('GooglePlay')" class="rounded inline-flex ">
+                    <img src="google-play-badge.png" alt="Google Play" class="h-12"/>
+                </a>
+                <!-- App Store Button -->
+                <a href="#" onclick="trackPlatform('AppStore')" class=" rounded inline-flex items-center">
+                    <img src="ios.svg" alt="App Store" class="h-12"/>
+                </a>
+                <!-- Web App Button -->
+                <a href="#" onclick="trackPlatform('WebApp')" class=" rounded inline-flex items-center">
+                    <img src="pwa-badge.png" alt="Web App" class="h-12"/>
+                </a>
+            </div>
         </div>
     </div>
 </div>
-<div class="relative -mt-12 lg:-mt-24">
+<div class="relative -mt-12 lg:-mt-24" style="z-index: -1;">
     <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg"
          xmlns:xlink="http://www.w3.org/1999/xlink">
         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -364,7 +378,7 @@
             </div>
             <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
                 <div class="flex items-center justify-start">
-                    <button onclick="window.location.href='#call-to-action-section'"
+                    <button onclick="document.getElementById('modal-ai-formatting').classList.remove('hidden')"
                             class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                         Learn More
                     </button>
@@ -391,7 +405,7 @@
                 <div class="flex items-center justify-center">
                     <button
                             class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-                            onclick="window.location.href='#call-to-action-section'"
+                            onclick="document.getElementById('modal-ai-mapping').classList.remove('hidden')"
                     >
                         Learn More
                     </button>
@@ -417,7 +431,7 @@
                 <div class="flex items-center justify-end">
                     <button
                             class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-                            onclick="window.location.href='#call-to-action-section'"
+                            onclick="document.getElementById('modal-ai-search').classList.remove('hidden')"
                     >
                         Learn More
                     </button>
@@ -547,6 +561,63 @@
         Register Now
     </button>
 </section>
+
+<!-- Modal for AI Formatting Feature -->
+<div id="modal-ai-formatting" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
+    <div class="relative top-1/4 mx-auto p-5 border w-3/4 shadow-lg rounded-md bg-white">
+        <div class="mt-3 text-center">
+            <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100">
+                <!-- Close Button -->
+                <span onclick="document.getElementById('modal-ai-formatting').classList.add('hidden')" class="text-red-600 h-6 w-6 cursor-pointer" role="button">&times;</span>
+            </div>
+            <!-- Animation Container -->
+            <div class="mt-2 px-7 py-3">
+                <div class="flex justify-center items-center h-64"> <!-- Fixed height for all animations -->
+                    <!-- Replace with your animation -->
+                    <img class="object-contain h-full w-full" src="#yourAnimationUrl" alt="AI Formatting Animation">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for AI Formatting Feature -->
+<div id="modal-ai-mapping" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
+    <div class="relative top-1/4 mx-auto p-5 border w-3/4 shadow-lg rounded-md bg-white">
+        <div class="mt-3 text-center">
+            <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100">
+                <!-- Close Button -->
+                <span onclick="document.getElementById('modal-ai-mapping').classList.add('hidden')" class="text-red-600 h-6 w-6 cursor-pointer" role="button">&times;</span>
+            </div>
+            <!-- Animation Container -->
+            <div class="mt-2 px-7 py-3">
+                <div class="flex justify-center items-center h-64"> <!-- Fixed height for all animations -->
+                    <!-- Replace with your animation -->
+                    <img class="object-contain h-full w-full" src="#yourAnimationUrl" alt="AI Formatting Animation">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for AI Formatting Feature -->
+<div id="modal-ai-search" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
+    <div class="relative top-1/4 mx-auto p-5 border w-3/4 shadow-lg rounded-md bg-white">
+        <div class="mt-3 text-center">
+            <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100">
+                <!-- Close Button -->
+                <span onclick="document.getElementById('modal-ai-search').classList.add('hidden')" class="text-red-600 h-6 w-6 cursor-pointer" role="button">&times;</span>
+            </div>
+            <!-- Animation Container -->
+            <div class="mt-2 px-7 py-3">
+                <div class="flex justify-center items-center h-64"> <!-- Fixed height for all animations -->
+                    <!-- Replace with your animation -->
+                    <img class="object-contain h-full w-full" src="#yourAnimationUrl" alt="AI Formatting Animation">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <!--Footer-->
 <footer class="bg-white">
     <div class="container mx-auto px-8">
@@ -729,6 +800,15 @@
             modal.style.display = "none";
         }
     }
+</script>
+<!-- Include your JavaScript tracking function -->
+<script>
+function trackPlatform(platform) {
+    // Implement your tracking logic here
+    // For example, send an event to Google Analytics or another analytics service
+    console.log(platform + ' download button clicked');
+    // Replace with your analytics code
+}
 </script>
 </body>
 </html>
