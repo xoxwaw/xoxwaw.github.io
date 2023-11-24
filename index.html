@@ -85,15 +85,38 @@
         <!-- Modal Body -->
         <p class="text-sm text-gray-500 mb-4">The product is in development and will be ready in the next few months.
             Subscribe to our mailing list for updates and be the first to know when we launch!</p>
-        <form id="signup-form" action="" method="POST" class="flex flex-col space-y-4">
+      <form id="signup-form" action="https://formspree.io/f/xwkdjlbb" method="POST" class="flex flex-col space-y-4">
             <input type="email" name="email" id="email"
                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                    placeholder="you@example.com" required>
+            <input type="hidden" name="platform" id="selected-platform">
+            <fieldset class="w-full px-2 py-2 rounded-lg border-2 border-gray-300 mb-4">
+                <legend class="text-gray-700">Top 3 features you are excited about</legend>
+                <div class="flex flex-col space-y-2">
+                    <label class="text-gray-700">
+                        <input type="checkbox" name="features" value="ai_formatting"> AI Formatting
+                    </label>
+                    <label class="text-gray-700">
+                        <input type="checkbox" name="features" value="auto_mapping"> AI Mindmap
+                    </label>
+                    <label class="text-gray-700">
+                        <input type="checkbox" name="features" value="enhanced_search"> Enhanced Search
+                    </label>
+                    <label class="text-gray-700">
+                        <input type="checkbox" name="features" value="map_hashtag"> Mapping from Hashtag
+                    </label>
+                    <label class="text-gray-700">
+                        <input type="checkbox" name="features" value="chatbot"> Query Chatbot Assistant
+                    </label>
+                </div>
+            </fieldset>
+
             <button type="submit"
-                    class="flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2  text-base font-medium text-white gradient focus:outline-none sm:text-sm">
+                    class="flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-base font-medium text-white focus:outline-none sm:text-sm">
                 Submit
             </button>
         </form>
+
     </div>
 </div>
 
@@ -116,17 +139,17 @@
             <img class="w-full md:w-4/5 z-50 justify-center" src="brainsdump4.png"/>
             <div class="mt-4 md:mt-8 flex justify-center space-x-4">
                 <!-- Google Play Button -->
-                <a href="#" onclick="trackPlatform('GooglePlay')" class="rounded inline-flex ">
+                <button onclick="trackPlatform('GooglePlay')" class="register-btn rounded inline-flex items-center">
                     <img src="google-play-badge.png" alt="Google Play" class="h-12"/>
-                </a>
+                </button>
                 <!-- App Store Button -->
-                <a href="#" onclick="trackPlatform('AppStore')" class=" rounded inline-flex items-center">
+                <button onclick="trackPlatform('AppStore')" class="register-btn rounded inline-flex items-center">
                     <img src="ios.svg" alt="App Store" class="h-12"/>
-                </a>
+                </button>
                 <!-- Web App Button -->
-                <a href="#" onclick="trackPlatform('WebApp')" class=" rounded inline-flex items-center">
+                <button onclick="trackPlatform('WebApp')" class="register-btn rounded inline-flex items-center">
                     <img src="pwa-badge.png" alt="Web App" class="h-12"/>
-                </a>
+                </button>
             </div>
         </div>
     </div>
@@ -467,7 +490,8 @@
                         <span class="text-base">per month</span>
                     </div>
                     <div class="flex items-center justify-center">
-                        <button class="register-btn mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                        <button onclick="window.location.href='#'"
+                                class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                             Sign Up
                         </button>
                     </div>
@@ -489,7 +513,8 @@
                         <span class="text-base">/ per month</span>
                     </div>
                     <div class="flex items-center justify-center">
-                        <button class="register-btn mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                        <button onclick="window.location.href='#'"
+                                class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                             Sign Up
                         </button>
                     </div>
@@ -513,7 +538,8 @@
                         <span class="text-base">/ per month</span>
                     </div>
                     <div class="flex items-center justify-center">
-                        <button class="register-btn mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                        <button onclick="window.location.href='#'"
+                                class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                             Sign Up
                         </button>
                     </div>
@@ -557,7 +583,8 @@
     <h3 class="my-4 text-3xl leading-tight">
         Ready to revolutionize your note-taking?
     </h3>
-    <button class="register-btn mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+    <button onclick="window.location.href='#'"
+            class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
         Register Now
     </button>
 </section>
@@ -740,8 +767,33 @@
         return false;
     }
 </script>
+
+<!-- Include your JavaScript tracking function -->
 <script>
-    const form = document.getElementById('signup-form');
+var modal = document.getElementById('emailModal');
+function trackPlatform(platform) {
+    // Implement your tracking logic here
+    // For example, send an event to Google Analytics or another analytics service
+    console.log(platform + ' download button clicked');
+
+    document.getElementById('selected-platform').value = platform;
+    modal.style.display = "block";
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName('close')[0];
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+}
+
+const form = document.getElementById('signup-form');
     form.addEventListener('submit', function (event) {
         event.preventDefault();
         const formData = new FormData(form);
@@ -766,49 +818,32 @@
                 });
             }
         }).catch(error => {
+            console.log(error)
             alert('Oops! There was a problem submitting your form');
         });
     });
 
 </script>
 <script>
-    // Get the modal
-    var modal = document.getElementById('emailModal');
 
-    // Get all buttons that open the modal with the class "register-btn"
-    var btns = document.getElementsByClassName('register-btn');
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName('close')[0];
-
-    // Convert buttons HTMLCollection to an array to use forEach
-    Array.from(btns).forEach(function (btn) {
-        // When the user clicks the button, open the modal
-        btn.onclick = function () {
-            modal.style.display = "block";
-        }
-    });
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-        modal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
 </script>
-<!-- Include your JavaScript tracking function -->
 <script>
-function trackPlatform(platform) {
-    // Implement your tracking logic here
-    // For example, send an event to Google Analytics or another analytics service
-    console.log(platform + ' download button clicked');
-    // Replace with your analytics code
-}
+    // JavaScript to limit the number of checked checkboxes to 3
+    const limit = 3;
+    const checkboxes = document.querySelectorAll('input[type="checkbox"][name="features"]');
+
+    checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener('change', function() {
+            let currentlyChecked = Array.from(checkboxes).filter(chk => chk.checked).length;
+            checkboxes.forEach((chk) => {
+                if (currentlyChecked >= limit && !chk.checked) {
+                    chk.disabled = true;
+                } else {
+                    chk.disabled = false;
+                }
+            });
+        });
+    });
 </script>
 </body>
 </html>
