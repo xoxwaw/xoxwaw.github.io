@@ -567,40 +567,51 @@
         </g>
     </g>
 </svg>
+<!-- Call-to-Action Section with Flexbox for Buttons -->
 <section class="container mx-auto text-center py-6 mb-12" id="call-to-action-section">
     <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
         Start with SharpNote Today!
     </h2>
     <div class="w-full mb-4">
-        <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
+        <div class="h-1 mx-auto bg-white w-1/4 opacity-25 my-0 py-0 rounded-t"></div>
     </div>
     <h3 class="my-4 text-3xl leading-tight">
-        Ready to revolutionize your note-taking?
+        Download Now!
     </h3>
-    <!-- Download Buttons -->
-    <div class="flex justify-center space-x-4 my-6">
+    <!-- First Row of Buttons -->
+    <div class="flex justify-center items-center gap-4 my-6">
         <!-- Google Play Button -->
-        <button onclick="trackPlatform('GooglePlay')" class="bg-white rounded inline-flex items-center p-2 shadow-lg">
-            <img src="google-play-badge.png" alt="Google Play" class="h-12 md:h-14"/>
-        </button>
+        <div class="flex justify-center w-1/2 md:w-auto">
+            <button onclick="trackPlatform('GooglePlay')" class="rounded shadow-lg bg-transparent">
+                <img src="google-play-badge.png" alt="Google Play" class="h-12 md:h-14"/>
+            </button>
+        </div>
         <!-- App Store Button -->
-        <button onclick="trackPlatform('AppStore')" class="bg-white rounded inline-flex items-center p-2 shadow-lg">
-            <img src="ios.svg" alt="App Store" class="h-12 md:h-14"/>
-        </button>
-        <!-- Web App Button -->
-        <button onclick="trackPlatform('WebApp')" class="bg-white rounded inline-flex items-center p-2 shadow-lg">
-            <img src="pwa-badge.png" alt="Web App" class="h-12 md:h-14"/>
-        </button>
+        <div class="flex justify-center w-1/2 md:w-auto">
+            <button onclick="trackPlatform('AppStore')" class="rounded shadow-lg bg-transparent">
+                <img src="ios.svg" alt="App Store" class="h-12 md:h-14"/>
+            </button>
+        </div>
     </div>
-    <!-- Original Register Button, hidden on mobile, visible on larger screens -->
-    <button onclick="window.location.href='#register'"
-            class="hidden md:inline-block mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-        Register Now
-    </button>
+    <!-- Second Row of Buttons -->
+    <div class="flex justify-center items-center gap-4">
+        <!-- Web App Button -->
+        <div class="flex justify-center w-1/2 md:w-auto">
+            <button onclick="trackPlatform('WebApp')" class="rounded shadow-lg bg-transparent">
+                <img src="pwa-badge.png" alt="Web App" class="h-12 md:h-14"/>
+            </button>
+        </div>
+        <!-- MacOS Button -->
+        <div class="flex justify-center w-1/2 md:w-auto">
+            <button onclick="trackPlatform('MacOS')" class="rounded shadow-lg bg-transparent">
+                <img src="mac-download-button-1.png" alt="Download for MacOS" class="h-12 md:h-14"/>
+            </button>
+        </div>
+    </div>
 </section>
 
 
-<!-- Modal for AI Formatting Feature -->
+<!-- Modal for A Formatting Feature -->
 <div id="modal-ai-formatting"
      class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto pt-16 sm:pt-24 w-fullZ">
     <div class="relative top-0 mt-10 mx-auto p-5 border w-full sm:w-3/4 shadow-lg rounded-md bg-white z-20">
