@@ -145,20 +145,6 @@
         <!--Right Col-->
         <div class="w-full md:w-3/5 py-6 text-center">
             <img class="w-full md:w-4/5 z-50 justify-center" src="brainsdump4.png"/>
-            <div class="mt-4 md:mt-8 flex justify-center space-x-4">
-                <!-- Google Play Button -->
-                <button onclick="trackPlatform('GooglePlay')" class="register-btn rounded inline-flex items-center">
-                    <img src="google-play-badge.png" alt="Google Play" class="h-12"/>
-                </button>
-                <!-- App Store Button -->
-                <button onclick="trackPlatform('AppStore')" class="register-btn rounded inline-flex items-center">
-                    <img src="ios.svg" alt="App Store" class="h-12"/>
-                </button>
-                <!-- Web App Button -->
-                <button onclick="trackPlatform('WebApp')" class="register-btn rounded inline-flex items-center">
-                    <img src="pwa-badge.png" alt="Web App" class="h-12"/>
-                </button>
-            </div>
         </div>
     </div>
 </div>
@@ -591,11 +577,28 @@
     <h3 class="my-4 text-3xl leading-tight">
         Ready to revolutionize your note-taking?
     </h3>
-    <button onclick="window.location.href='#'"
-            class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+    <!-- Download Buttons -->
+    <div class="flex justify-center space-x-4 my-6">
+        <!-- Google Play Button -->
+        <button onclick="trackPlatform('GooglePlay')" class="bg-white rounded inline-flex items-center p-2 shadow-lg">
+            <img src="google-play-badge.png" alt="Google Play" class="h-12 md:h-14"/>
+        </button>
+        <!-- App Store Button -->
+        <button onclick="trackPlatform('AppStore')" class="bg-white rounded inline-flex items-center p-2 shadow-lg">
+            <img src="ios.svg" alt="App Store" class="h-12 md:h-14"/>
+        </button>
+        <!-- Web App Button -->
+        <button onclick="trackPlatform('WebApp')" class="bg-white rounded inline-flex items-center p-2 shadow-lg">
+            <img src="pwa-badge.png" alt="Web App" class="h-12 md:h-14"/>
+        </button>
+    </div>
+    <!-- Original Register Button, hidden on mobile, visible on larger screens -->
+    <button onclick="window.location.href='#register'"
+            class="hidden md:inline-block mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
         Register Now
     </button>
 </section>
+
 
 <!-- Modal for AI Formatting Feature -->
 <div id="modal-ai-formatting"
@@ -851,7 +854,7 @@
         console.log(selectedPackage + ' subscription button clicked');
 
         document.getElementById('selected-package').value = selectedPackage;
-        window.location.href = '#';
+        window.location.href = '#call-to-action-section';
     }
 
     function trackPlatform(platform) {
