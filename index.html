@@ -624,7 +624,7 @@
                 </div>
                 <button onclick="setRawTextAndCreateFormat()"
                         class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                    Create Map
+                    Format
                 </button>
             </div>
             <!-- Formatted Text Panel -->
@@ -918,9 +918,38 @@
         const selection = document.getElementById('text-options-format').value;
         var formattedText;
         if (selection === 'apple') {
-            formattedText = ``;
+            formattedText = `
+            <div class="flex-1 ml-4">
+              <h5 class="text-lg font-semibold mb-2">Formatted Text</h5>
+              <p class="mb-2"><span class="bg-blue-100 px-1">Basic Description:</span> An <span class="bg-red-100 px-1">apple</span> is a <span class="bg-pink-100 px-1">sweet fruit</span> with <span class="bg-red-100 px-1">red</span>, <span class="bg-green-100 px-1">green</span> or <span class="bg-yellow-100 px-1">yellow</span> skin
+               and a <span class="bg-green-100 px-1">crisp interior</span>.</p>
+              <div class="bg-yellow-100 px-2 py-1 rounded">
+                <h4 class="text-lg font-semibold mb-2 underline">Key Takeaways:</h4>
+                <ul class="list-disc ml-5">
+                  Apples:
+                  <li>sweet fruits</li>
+                  <li>various skin colors</li>
+                  <li>crisp texture inside</li>
+                </ul>
+              </div>
+            </div>
+            `;
         } else if (selection === 'computer') {
-            formattedText = ``;
+            formattedText = `
+            <div class="flex-1 ml-4">
+              <h5 class="text-lg font-semibold mb-2">Formatted Text</h5>
+              <p class="mb-2"><span class="bg-blue-100 px-1">Basic Description:</span> Computers are <span class="bg-pink-100 px-1">electronic devices</span> that <span class="bg-green-100 px-1">process data</span>. They have <span class="bg-green-100 px-1">hardware</span> like a <span class="bg-pink-100 px-1">CPU</span> and <span class="bg-pink-100 px-1">memory</span>, and they run <span class="bg-green-100 px-1">software applications</span> for <span class="bg-green-100 px-1">various tasks</span>.</p>
+
+              <div class="bg-yellow-100 px-2 py-1 rounded">
+                <h4 class="text-lg font-semibold mb-2 underline">Key Takeaways:</h4>
+                <ul class="list-disc ml-5">
+                  <li>Computers are electronic devices designed for processing data.</li>
+                  <li>They consist of essential hardware components, including a CPU and memory.</li>
+                  <li>Computers operate software applications to perform a wide range of tasks.</li>
+                </ul>
+              </div>
+            </div>
+            `;
         } else if (selection === 'photovoltaic') {
             formattedText = `
               <div class="flex-1 ml-4">
