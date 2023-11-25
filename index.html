@@ -925,14 +925,14 @@
         const formData = new FormData(form);
         fetch(form.action, {
             method: 'POST',
-            body: {
+            body: JSON.stringify({
                 'email': formData.get('email'),
                 'package': formData.get('subscription-package'),
                 'platform': formData.get('platform'),
                 'features': formData.getAll('features'),
-            },
+            }),
             headers: {
-                'Accept': 'application/json'
+                'Content-Type': 'application/json'
             }
         }).then(response => {
             if (response.ok) {
